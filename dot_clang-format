@@ -1,0 +1,14 @@
+BasedOnStyle: LLVM
+UseTab: Never
+IndentWidth: 4
+TabWidth: 4
+MaxEmptyLinesToKeep: 2
+BreakBeforeBraces: Attach
+AllowShortBlocksOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: true
+SpaceBeforeParens: ControlStatements
+ColumnLimit: 100
+
+SortIncludes: false

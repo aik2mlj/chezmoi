@@ -1,0 +1,89 @@
+default_font_face Open Sans
+default_font_size 13
+menubar_height 24
+menubar_font_size 13
+menubar_spacing_width 16
+menubar_margin_width 6
+scrollbar_width 10
+scrollbar_min_thumb_height 4
+combo_height 20
+_3dface #333333
+_3dshadow #1f1f1f
+_3dhilight #1f1f1f
+_3ddkshadow #1f1f1f
+button_bg #2b2b2b
+button_text #aeaeae
+button_text_disabled #585858
+button_shadow #1f1f1f
+button_hilight #1f1f1f
+checkbox_text #aeaeae
+checkbox_text_disabled #3c3c3c
+checkbox_fg #575757
+checkbox_inter #b2b2b2
+checkbox_bg #2b2b2b
+scrollbar #737373
+scrollbar_fg #737373
+scrollbar_bg #515151
+edit_cursor #aeaeae
+edit_bg #686868
+edit_bg_disabled #595959
+edit_text #aeaeae
+edit_text_disabled #3c3c3c
+edit_bg_sel #b2b2b2
+edit_text_sel #1f1f1f
+edit_hilight #1f1f1f
+edit_shadow #1f1f1f
+info_bk #2b2b2b
+info_text #aeaeae
+menu_bg #222222 ; defaults to _3dface
+menu_shadow #333333 ; defaults to _3dshadow
+; menu_hilight #565656 ; defaults to _3dhilight
+; menu_text #000000 ; defaults to button_text
+menu_text_disabled #808080
+menu_bg_sel #444444 ; defaults to menu_text
+menu_text_sel #fefefe ; defaults to menu_bg
+menu_scroll #404040
+; menu_scroll_arrow #606060 ; defaults to _3dshadow
+menu_submenu_arrow #575757
+menubar_bg #383838 ; defaults to menu_bg
+menubar_text #ffffff ; defaults to menu_text
+menubar_text_disabled #EBEBEB
+menubar_bg_sel #505050 ; defaults to menu_bg_sel
+menubar_text_sel #FFFFFF ; defaults to menu_text_sel
+trackbar_track #1f1f1f
+trackbar_mark #1f1f1f
+trackbar_knob #b2b2b2
+progress #b2b2b2
+label_text #eeeeee
+label_text_disabled #3c3c3c
+combo_text #aeaeae
+combo_text_disabled #585858
+combo_bg #2b2b2b
+combo_bg2 #2b2b2b
+combo_shadow #1f1f1f
+combo_hilight #1f1f1f
+combo_arrow #575757
+combo_arrow_press #b2b2b2
+listview_bg #2b2b2b
+listview_bg_sel #b2b2b2
+listview_text #aeaeae
+listview_text_sel #1f1f1f
+listview_grid #1f1f1f
+listview_hdr_arrow #4c4c4c
+listview_hdr_shadow #565656
+listview_hdr_hilight #565656
+listview_hdr_bg #686868
+listview_hdr_text #1f1f1f
+treeview_text #aeaeae
+treeview_bg #2b2b2b
+treeview_bg_sel #b2b2b2
+treeview_text_sel #1f1f1f
+treeview_arrow #575757
+tab_shadow #1f1f1f
+tab_hilight #1f1f1f
+tab_text #1f1f1f
+focusrect #aeaeae
+group_text #ffffff
+group_shadow #515151
+group_hilight #595959
+focus_hilight #b2b2b2

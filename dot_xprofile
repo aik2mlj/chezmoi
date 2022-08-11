@@ -1,0 +1,27 @@
+# make CapsLock behave like Ctrl:
+# setxkbmap -option ctrl:nocaps
+
+# make short-pressed Ctrl behave like Escape:
+# xcape -e 'Control_L=Escape'
+
+# use udevmon for caps2esc tool (interception-tool)
+udevmon &
+
+# start xbanish
+xbanish &
+
+# start clash
+# clash > /dev/null &
+clash -f .config/clash/96ac255d-ac10-4b6b-bf3c-d3758a09d177 > /dev/null &
+
+# start xbindkeys
+# xbindkeys &
+
+# start fusuma
+# fusuma > /dev/null &
+
+# latte shit
+# killall latte-dock &
+# latte-dock &
+
+timidity -iA &

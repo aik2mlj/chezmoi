@@ -1,0 +1,20 @@
+set selection-clipboard clipboard
+
+set recolor   
+set recolor-lightcolor \#c7edcc
+set recolor-darkcolor \#000000
+set recolor-keephue
+set default-bg \#222230
+
+set scroll-step 60
+set first-page-column 1:1
+
+map [normal] D :set first-page-column 1:2
+
+map [normal] J scroll half-down
+map [normal] K scroll half-up
+map [normal] <Left> navigate previous
+map [normal] <Right> navigate next
+
+map [normal] <A-Left> jumplist backward
+map [normal] <A-Right> jumplist forward

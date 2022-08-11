@@ -1,0 +1,24 @@
+[Appearance]
+BackgroundColorOpacity=70
+Blur=true
+Skin=materia-dark
+Translucency=true
+
+[Desktop Entry]
+DefaultProfile=Garuda.profile
+
+[Dialogs]
+FirstRun=false
+
+[KFileDialog Settings]
+Recent Files[$e]=materia-dark.tar.gz,file:$HOME/Downloads/materia-dark.tar.gz
+Recent URLs[$e]=file:$HOME/Downloads/
+detailViewIconSize=16
+
+[Notification Messages]
+hinding_title_bar=false
+
+[Window]
+Height=52
+KeepOpen=false
+ShowTitleBar=false
