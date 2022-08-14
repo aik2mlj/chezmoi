@@ -8,7 +8,7 @@ switch-to-activity-16d58fed-5d8b-481d-994f-2eb008bd8307=none,none,Switch to acti
 [Alacritty.desktop]
 New=none,none,New Terminal
 _k_friendly_name=Alacritty
-_launch=Meta+Return,none,Alacritty
+_launch=none,none,Alacritty
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
@@ -34,7 +34,7 @@ increase_window_height=Meta+Ctrl+J,Meta+Ctrl+J,Increase Window Height
 increase_window_width=Meta+Ctrl+L,Meta+Ctrl+L,Increase Window Width
 move_window_to_bottom_pos=Meta+Shift+J,Meta+Shift+J,Move Window Down
 move_window_to_left_pos=Meta+Shift+H,Meta+Shift+H,Move Window Left
-move_window_to_next_pos=none,,Move Window to the Next Position
+move_window_to_next_pos=Meta+',,Move Window to the Next Position
 move_window_to_prev_pos=none,,Move Window to the Previous Position
 move_window_to_right_pos=Meta+Shift+L,Meta+Shift+L,Move Window Right
 move_window_to_upper_pos=Meta+Shift+K,Meta+Shift+K,Move Window Up
@@ -82,7 +82,7 @@ _k_friendly_name=Custom Shortcuts Service
 
 [kitty.desktop]
 _k_friendly_name=kitty
-_launch=none,none,kitty
+_launch=Meta+Return,none,kitty
 
 [kmix]
 _k_friendly_name=Audio Volume

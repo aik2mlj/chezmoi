@@ -9,7 +9,7 @@ style_user = "bold red"
 # Second param
 [hostname]
 disabled = false
-format = "[$hostname]($style) in "
+format = "on [$hostname]($style) in "
 ssh_only = true
 style = "bold dimmed red"
 trim_at = "-"
