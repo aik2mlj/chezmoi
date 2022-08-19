@@ -67,8 +67,15 @@ OverrideXkbOption=False
 CustomXkbOption=
 # Force Enabled Addons
 EnabledAddons=
-# Force Disabled Addons
-DisabledAddons=
 # Preload input method to be used by default
 PreloadInputMethod=True
+
+[Behavior/DisabledAddons]
+0=chttrans
+1=cloudpinyin
+2=fullwidth
+3=pinyin
+4=pinyinhelper
+5=punctuation
+6=table
 
