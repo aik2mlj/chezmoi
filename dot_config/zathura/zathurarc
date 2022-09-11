@@ -18,3 +18,6 @@ map [normal] <Right> navigate next
 
 map [normal] <A-Left> jumplist backward
 map [normal] <A-Right> jumplist forward
+
+map <C-m> feedkeys ":bmark"
+map <C-g> feedkeys ":blist <Tab>"
