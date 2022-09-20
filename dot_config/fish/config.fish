@@ -97,7 +97,7 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 # ====== Copying ends
 
 # color scheme git@github.com:aik2mlj/fish-color-scheme-switcher.git
-scheme set dr460nized
+scheme set kanagawa
 
 zoxide init fish | source
 

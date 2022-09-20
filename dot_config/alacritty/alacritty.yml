@@ -92,7 +92,7 @@ scrolling:
 # Font configuration
 font:
   # Normal (roman) font face
-  size: 9
+  size: 10
   normal:
     # Font family
     #
@@ -539,62 +539,62 @@ key_bindings:
   #print_events: false
 
 # Custom colorscheme fitting Sweetified theme
-colors:
-  primary:
-    background: '#0a1124'
-    foreground: '#eec49a'
-  cursor:
-    text:       '#0a1124'
-    cursor:     '#eec49a'
-  normal:
-    black:      '#0a1124'
-    red:        '#f35645'
-    green:      '#EB3247'
-    yellow:     '#BC4349'
-    blue:       '#F35645'
-    magenta:    '#F6A73B'
-    cyan:       '#FAD32F'
-    white:      '#eec49a'
-  bright:
-    black:      '#a6896b'
-    red:        '#f35645'
-    green:      '#EB3247'
-    yellow:     '#BC4349'
-    blue:       '#F35645'
-    magenta:    '#F6A73B'
-    cyan:       '#FAD32F'
-    white:      '#eec49a'
-theme: Garuda.dr460nized
-
-## name: Kanagawa
-## license: MIT
-## author: Tommaso Laurenzi
-## upstream: https://github.com/rebelot/kanagawa.nvim/
 # colors:
 #   primary:
-#     background: '#1F1F28'
-#     foreground: '#DCD7BA'
-#     # selection_background: '#2D4F67'
-#     # selection_foreground: '#C8C093'
-# # url_color '#72A7BC'
+#     background: '#0a1124'
+#     foreground: '#eec49a'
 #   cursor:
-#     cursor: '#C8C093'
+#     text:       '#0a1124'
+#     cursor:     '#eec49a'
 #   normal:
-#     black:    '#090618'
-#     red:      '#C34043'
-#     green:    '#76946A'
-#     yellow:   '#C0A36E'
-#     blue:     '#7E9CD8'
-#     magenta:  '#957FB8'
-#     cyan:     '#6A9589'
-#     white:    '#C8C093'
-# # bright
+#     black:      '#0a1124'
+#     red:        '#f35645'
+#     green:      '#EB3247'
+#     yellow:     '#BC4349'
+#     blue:       '#F35645'
+#     magenta:    '#F6A73B'
+#     cyan:       '#FAD32F'
+#     white:      '#eec49a'
 #   bright:
-#     black:    '#727169'
-#     red:      '#E82424'
-#     green:    '#98BB6C'
-#     yellow:   '#E6C384'
-#     blue:     '#7FB4CA'
-#     magenta:  '#938AA9'
-#     cyan:     '#7AA89F'
-#     white:    '#DCD7BA'
+#     black:      '#a6896b'
+#     red:        '#f35645'
+#     green:      '#EB3247'
+#     yellow:     '#BC4349'
+#     blue:       '#F35645'
+#     magenta:    '#F6A73B'
+#     cyan:       '#FAD32F'
+#     white:      '#eec49a'
+# theme: Garuda.dr460nized
+
+colors:
+  primary:
+    background: '#1f1f28'
+    foreground: '#dcd7ba'
+
+  normal:
+    black:   '#090618'
+    red:     '#c34043'
+    green:   '#76946a'
+    yellow:  '#c0a36e'
+    blue:    '#7e9cd8'
+    magenta: '#957fb8'
+    cyan:    '#6a9589'
+    white:   '#c8c093'
+
+  bright:
+    black:   '#727169'
+    red:     '#e82424'
+    green:   '#98bb6c'
+    yellow:  '#e6c384'
+    blue:    '#7fb4ca'
+    magenta: '#938aa9'
+    cyan:    '#7aa89f'
+    white:   '#dcd7ba'
+
+  selection:
+    background: '#2d4f67'
+    foreground: '#c8c093'
+
+  indexed_colors:
+    - { index: 16, color: '#ffa066' }
+    - { index: 17, color: '#ff5d62' }
