@@ -3,8 +3,8 @@
 [username]
 format = " [╭─$user]($style) "
 show_always = true
-style_root = "bold red"
-style_user = "bold red"
+style_root = "bold yellow"
+style_user = "bold yellow"
 
 # Second param
 [hostname]
@@ -77,7 +77,7 @@ xonsh_indicator = ""
 bash_indicator = "ب"
 format = " [╰─$indicator]($style) "
 unknown_indicator = "mystery shell"
-style = "red bold"
+style = "bold yellow"
 disabled = false
 
 # Prompt: param 2
