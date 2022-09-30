@@ -1,0 +1,4 @@
+encryption = "age"
+[age]
+    identity = "/home/aik2/.agekey"
+    recipient = "age1e2yhukluymwtvu3pz8tavdm2884u6sc35pnxk0h8gt9w8srxssfsgwme32"
