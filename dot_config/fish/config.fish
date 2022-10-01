@@ -96,6 +96,11 @@ alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 # ====== Copying ends
 
+# rclone stuff
+alias mount_yuki='rclone mount --vfs-cache-mode full --vfs-cache-max-size 5G --vfs-cache-max-age 100h --daemon yuki_enc: /mnt/Yuki'
+alias mount_yuki_top='rclone mount --vfs-cache-mode full --vfs-cache-max-size 5G --vfs-cache-max-age 100h --daemon yuki: /mnt/Yuki_top'
+alias mount_gsd='rclone mount --vfs-cache-mode full --vfs-cache-max-size 5G --vfs-cache-max-age 100h --daemon gsd_enc: /mnt/GSD'
+
 # color scheme git@github.com:aik2mlj/fish-color-scheme-switcher.git
 scheme set kanagawa
 
