@@ -1,10 +1,10 @@
 [Groups/0]
 # Group Name
-Name=Default
+Name=arabic
 # Layout
 Default Layout=us-altgr-intl
 # Default Input Method
-DefaultIM=rime
+DefaultIM=keyboard-ara
 
 [Groups/0/Items/0]
 # Name
@@ -14,17 +14,17 @@ Layout=
 
 [Groups/0/Items/1]
 # Name
-Name=rime
+Name=keyboard-ara
 # Layout
 Layout=
 
 [Groups/1]
 # Group Name
-Name=arabic
+Name=Default
 # Layout
 Default Layout=us-altgr-intl
 # Default Input Method
-DefaultIM=keyboard-ara
+DefaultIM=rime
 
 [Groups/1/Items/0]
 # Name
@@ -34,7 +34,7 @@ Layout=
 
 [Groups/1/Items/1]
 # Name
-Name=keyboard-ara
+Name=rime
 # Layout
 Layout=
 
