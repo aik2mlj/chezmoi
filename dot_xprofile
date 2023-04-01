@@ -11,8 +11,8 @@ udevmon &
 xbanish &
 
 # start clash
-# clash > /dev/null &
-clash -f .config/clash/96ac255d-ac10-4b6b-bf3c-d3758a09d177 > /dev/null &
+clash > /dev/null &
+# clash -f .config/clash/96ac255d-ac10-4b6b-bf3c-d3758a09d177 > /dev/null &
 
 # start xbindkeys
 # xbindkeys &
