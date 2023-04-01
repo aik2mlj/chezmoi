@@ -6,7 +6,7 @@ set recolor-darkcolor \#000000
 set recolor-keephue
 set default-bg \#222230
 
-set scroll-step 60
+set scroll-step 80
 set first-page-column 1:1
 
 map [normal] D :set first-page-column 1:2
