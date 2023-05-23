@@ -40,6 +40,8 @@ alias l.="exa -a --group-directories-first --icons | egrep '^\.'"               
 alias ra="ranger-cd"
 alias vim="nvim"
 alias df="df -h"
+alias rm="rm -v"
+alias sys="sudo systemctl"
 
 alias lg="lazygit"
 alias gs="git status"
