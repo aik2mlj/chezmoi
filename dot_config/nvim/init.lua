@@ -2,6 +2,7 @@ vim.opt.guifont = "FiraCode Nerd Font:h13"
 vim.g.neovide_transparency = 0.5
 -- vim.g.neovide_no_idle = "v:true"
 
+vim.opt.nu = true
 vim.opt.wrap = true
 vim.opt.lbr = true
 vim.opt.tw = 0
@@ -35,6 +36,10 @@ vim.cmd([[
 ]])
 vim.cmd([[
 	noremap <C-f> <C-w>w
+    noremap <C-k> <C-w>k
+    noremap <C-j> <C-w>j
+    noremap <C-h> <C-w>h
+    noremap <C-l> <C-w>l
 	noremap s <nop>
 	noremap ss :vsplit<CR>
 	noremap sd :split<CR>
@@ -131,35 +136,57 @@ vim.cmd([[
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        "git",
-        "clone",
-        "--filter=blob:none",
-        "https://github.com/folke/lazy.nvim.git",
-        "--branch=stable", -- latest stable release
-        lazypath,
-    })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    {
-        'glacambre/firenvim',
+	{
+		"glacambre/firenvim",
 
-        -- Lazy load firenvim
-        -- Explanation: https://github.com/folke/lazy.nvim/discussions/463#discussioncomment-4819297
-        cond = not not vim.g.started_by_firenvim,
-        build = function()
-            require("lazy").load({ plugins = "firenvim", wait = true })
-            vim.fn["firenvim#install"](0)
-        end
-    },
-    {
-        "rebelot/kanagawa.nvim"
-    },
+		-- Lazy load firenvim
+		-- Explanation: https://github.com/folke/lazy.nvim/discussions/463#discussioncomment-4819297
+		cond = not not vim.g.started_by_firenvim,
+		build = function()
+			require("lazy").load({ plugins = "firenvim", wait = true })
+			vim.fn["firenvim#install"](0)
+		end,
+	},
+	{
+		"rebelot/kanagawa.nvim",
+	},
+	{ "nvim-tree/nvim-tree.lua" },
+	{ "nvim-tree/nvim-web-devicons" },
+	{
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	},
 })
 
-if vim.g.started_by_firenvim == true then
-    vim.g.firenvim_config.localSettings['.*'] = { takeover = 'never' }
-end
+-- if vim.g.started_by_firenvim == true then
+vim.g.firenvim_config.localSettings[".*"] = { takeover = "never" }
+-- end
 vim.cmd("colorscheme kanagawa")
+
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+-- empty setup using defaults
+require("nvim-tree").setup()
+vim.cmd("noremap <LEADER>e :NvimTreeToggle<cr>")
+vim.api.nvim_set_option("clipboard", "unnamedplus")
+vim.keymap.set('n', '<leader>/', '<Plug>(comment_toggle_linewise_current)')
+vim.keymap.set('x', '<leader>/', '<Plug>(comment_toggle_linewise_visual)')
