@@ -170,11 +170,12 @@ require("lazy").setup({
 			require("Comment").setup()
 		end,
 	},
+    { "h-hg/fcitx.nvim" }
 })
 
--- if vim.g.started_by_firenvim == true then
-vim.g.firenvim_config.localSettings[".*"] = { takeover = "never" }
--- end
+if vim.g.started_by_firenvim == true then
+    vim.g.firenvim_config.localSettings[".*"] = { takeover = "never" }
+end
 vim.cmd("colorscheme kanagawa")
 
 -- disable netrw at the very start of your init.lua
