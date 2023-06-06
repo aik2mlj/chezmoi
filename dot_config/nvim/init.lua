@@ -170,11 +170,24 @@ require("lazy").setup({
 			require("Comment").setup()
 		end,
 	},
-    { "h-hg/fcitx.nvim" }
+	{ "h-hg/fcitx.nvim" },
 })
 
+vim.g.firenvim_config = {
+    globalSettings = { cmdlineTimeout = 500 },
+    localSettings = {
+        [".*"] = {
+            -- cmdline  = "neovim",
+            content  = "text",
+            priority = 0,
+            selector = "textarea",
+            takeover = "never"
+        }
+    }
+}
+
 if vim.g.started_by_firenvim == true then
-    vim.g.firenvim_config.localSettings[".*"] = { takeover = "never" }
+    vim.o.laststatus = 0
 end
 vim.cmd("colorscheme kanagawa")
 
@@ -189,5 +202,5 @@ vim.opt.termguicolors = true
 require("nvim-tree").setup()
 vim.cmd("noremap <LEADER>e :NvimTreeToggle<cr>")
 vim.api.nvim_set_option("clipboard", "unnamedplus")
-vim.keymap.set('n', '<leader>/', '<Plug>(comment_toggle_linewise_current)')
-vim.keymap.set('x', '<leader>/', '<Plug>(comment_toggle_linewise_visual)')
+vim.keymap.set("n", "<leader>/", "<Plug>(comment_toggle_linewise_current)")
+vim.keymap.set("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)")
