@@ -40,7 +40,7 @@ alias l.="exa -a --group-directories-first --icons | egrep '^\.'"               
 alias ra="ranger-cd"
 alias vim="nvim"
 alias df="df -h"
-alias rm="rm -v"
+alias rm="/bin/rm -v > ~/.rm.log"
 alias sys="sudo systemctl"
 
 alias lg="lazygit"
