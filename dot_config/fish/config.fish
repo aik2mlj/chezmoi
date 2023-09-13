@@ -2,6 +2,7 @@ set -gx PATH "$HOME/.local/bin" $PATH
 set -gx PATH "/opt/cuda/bin" $PATH
 set -gx GEM_HOME "$HOME/.local/share/gem/ruby/3.0.0/bin"
 set -gx PATH $GEM_HOME $PATH
+set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 # set hostip (cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
 # if not in wsl, uncomment this line
@@ -107,7 +108,8 @@ alias mount_yuki_top='rclone mount --vfs-cache-mode writes --vfs-cache-max-size 
 alias mount_gsd='rclone mount --vfs-cache-mode writes --vfs-cache-max-size 5G --vfs-cache-max-age 10h --daemon gsd: /mnt/GSD'
 
 # color scheme git@github.com:aik2mlj/fish-color-scheme-switcher.git
-scheme set kanagawa
+# scheme set tokyonight
+kanagawa
 
 zoxide init fish | source
 
