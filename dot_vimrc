@@ -1,0 +1,114 @@
+set nu
+set wrap
+set lbr
+set tw=0
+set virtualedit="block"
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set indentexpr=""
+set confirm
+set spelllang="en,cjk"
+set shell="/bin/sh"
+set scrolloff=15
+
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
+map Q gq
+noremap Y y$
+nnoremap < <<
+nnoremap > >>
+nnoremap U <C-r>
+noremap <silent> H g^
+noremap <silent> L g$
+noremap <silent> J 5gj
+noremap <silent> K 5gk
+noremap <C-f> <C-w>w
+noremap <C-k> <C-w>k
+noremap <C-j> <C-w>j
+noremap <C-h> <C-w>h
+noremap <C-l> <C-w>l
+noremap s <nop>
+noremap ss :vsplit<CR>
+noremap sd :split<CR>
+noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
+noremap sj :set splitbelow<CR>:split<CR>
+noremap sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+noremap sl :set splitright<CR>:vsplit<CR>
+noremap so <C-w>o
+noremap su <C-w>t<C-w>K
+noremap sv <C-w>t<C-w>H
+nnoremap <silent> <M-h> :BufferLineCyclePrev<CR>
+nnoremap <silent> <M-l> :BufferLineCycleNext<CR>
+nnoremap <silent> <M-H> :BufferLineMovePrev<CR>
+nnoremap <silent> <M-L> :BufferLineMoveNext<CR>
+nnoremap <silent> <M-p> :b#<CR>
+nnoremap <silent> <M-n> :e
+nnoremap <silent> <M-q> :bd<CR>
+nnoremap <silent> <M-Q> :bd!<CR>
+inoremap <silent> <M-h> <ESC>:BufferLineCyclePrev<CR>
+inoremap <silent> <M-l> <ESC>:BufferLineCycleNext<CR>
+inoremap <silent> <M-p> <ESC>:b#<CR>
+inoremap <silent> <M-n> <ESC>:enew<CR>
+inoremap <silent> <M-q> <ESC>:bd<CR>
+inoremap <silent> <M-Q> <ESC>:bd!<CR>
+noremap <C-n> :vnew<CR>
+nnoremap <M-j> :m .+1<CR>==
+nnoremap <M-k> :m .-2<CR>==
+inoremap <M-j> <ESC>:m .+1<CR>==gi
+inoremap <M-k> <ESC>:m .-2<CR>==gi
+xnoremap <M-j> :m'>+<CR>==gv
+xnoremap <M-k> :m-2<CR>==gv
+nnoremap <M-J> :t .<CR>
+nnoremap <M-K> :t .-1<CR>
+xnoremap <M-J> :t'><CR>gv
+xnoremap <M-K> :t-1<CR>gv
+
+let mapleader = " "
+
+noremap <LEADER>rc :e $MYVIMRC<CR>
+nnoremap <LEADER>q :q<CR>
+nnoremap <LEADER>Q :q!<CR>
+nnoremap <LEADER>w :w<CR>
+noremap <LEADER>h :nohls<CR>
+noremap <LEADER>j J
+nnoremap <C-q> :q!<CR>
+inoremap <C-q> <ESC>:q!<CR>
+inoremap <C-s> <ESC>:w<CR>
+noremap s <nop>
+noremap ss :vsplit<CR>
+noremap sd :split<CR>
+noremap sk :set nosplitbelow<CR>:split<CR>:set splitbelow<CR>
+noremap sj :set splitbelow<CR>:split<CR>
+noremap sh :set nosplitright<CR>:vsplit<CR>:set splitright<CR>
+noremap sl :set splitright<CR>:vsplit<CR>
+noremap so <C-w>o
+" Place the two screens up and down
+noremap su <C-w>t<C-w>K
+" Place the two screens side by side
+noremap sv <C-w>t<C-w>H
+
+" Resize splits with arrow keys
+noremap <C-up> :res +5<CR>
+noremap <C-down> :res -5<CR>
+noremap <C-left> :vertical resize-5<CR>
+noremap <C-right> :vertical resize+5<CR>
+
+" ================
+" Buffer Management
+" ================
+
+nnoremap <M-h> :bp<CR>
+nnoremap <M-l> :bn<CR>
+nnoremap <M-p> :b#<CR>
+nnoremap <M-n> :enew<CR>
+nnoremap <M-q> :bd<CR>
+nnoremap <M-Q> :bd!<CR>
+inoremap <M-h> <ESC>:bp<CR>
+inoremap <M-l> <ESC>:bn<CR>
+inoremap <M-p> <ESC>:b#<CR>
+inoremap <M-n> <ESC>:enew<CR>
+inoremap <M-q> <ESC>:bd<CR>
+inoremap <M-Q> <ESC>:bd!<CR>
+noremap <C-n> :vnew<CR>
