@@ -1,5 +1,6 @@
 set nu
 set wrap
+set hlsearch
 set lbr
 set tw=0
 set virtualedit="block"
@@ -13,8 +14,8 @@ set spelllang="en,cjk"
 set shell="/bin/sh"
 set scrolloff=15
 
-nnoremap <expr> j v:count ? 'j' : 'gj'
-nnoremap <expr> k v:count ? 'k' : 'gk'
+nnoremap j gj
+nnoremap k gk
 map Q gq
 noremap Y y$
 nnoremap < <<
