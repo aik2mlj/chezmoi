@@ -15,7 +15,7 @@ set PROXY_HTTP "http://$hostip:$port"
 # set -gx https_proxy "$PROXY_HTTP"
 # set -gx HTTPS_PROXY "$PROXY_HTTP"
 
-set -gx EDITOR lvim
+set -gx EDITOR nvim
 
 function unset_proxy
     set -e http_proxy
@@ -31,7 +31,7 @@ function set_proxy
 end
 
 fzf_configure_bindings --directory=\cf
-bind \co ranger-cd
+bind \co lfcd
 
 alias ls="exa --group-directories-first --icons"
 alias la="exa -l -a --group-directories-first --icons"
