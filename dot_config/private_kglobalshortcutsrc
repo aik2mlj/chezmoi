@@ -4,6 +4,7 @@ update_info=bismuth_shortcuts_category.upd:bismuth-shortcuts-category,bismuth_sh
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-16d58fed-5d8b-481d-994f-2eb008bd8307=none,none,Switch to activity "Default"
+switch-to-activity-bf94243b-30af-4673-a280-db53f17886b7=none,none,Switch to activity "Default"
 
 [Alacritty.desktop]
 New=none,none,New Terminal
@@ -19,24 +20,24 @@ _k_friendly_name=Keyboard Layout Switcher
 
 [bismuth]
 _k_friendly_name=Window Tiling
-decrease_master_size=none,,Decrease Master Area Size
+decrease_master_size=none,none,Decrease Master Area Size
 decrease_master_win_count=Meta+[,Meta+[,Decrease Master Area Window Count
 decrease_window_height=Meta+Ctrl+K,Meta+Ctrl+K,Decrease Window Height
 decrease_window_width=Meta+Ctrl+H,Meta+Ctrl+H,Decrease Window Width
-focus_bottom_window=Meta+J,Meta+J,Focus Bottom Window
+focus_bottom_window=none,Meta+J,Focus Bottom Window
 focus_left_window=Meta+H,Meta+H,Focus Left Window
-focus_next_window=none,,Focus Next Window
-focus_prev_window=none,,Focus Previous Window
+focus_next_window=none,none,Focus Next Window
+focus_prev_window=none,none,Focus Previous Window
 focus_right_window=Meta+L,Meta+L,Focus Right Window
 focus_upper_window=Meta+K,Meta+K,Focus Upper Window
-increase_master_size=none,,Increase Master Area Size
+increase_master_size=none,none,Increase Master Area Size
 increase_master_win_count=Meta+],Meta+],Increase Master Area Window Count
 increase_window_height=Meta+Ctrl+J,Meta+Ctrl+J,Increase Window Height
 increase_window_width=Meta+Ctrl+L,Meta+Ctrl+L,Increase Window Width
 move_window_to_bottom_pos=Meta+Shift+J,Meta+Shift+J,Move Window Down
 move_window_to_left_pos=Meta+Shift+H,Meta+Shift+H,Move Window Left
-move_window_to_next_pos=Meta+',,Move Window to the Next Position
-move_window_to_prev_pos=none,,Move Window to the Previous Position
+move_window_to_next_pos=Meta+',none,Move Window to the Next Position
+move_window_to_prev_pos=none,none,Move Window to the Previous Position
 move_window_to_right_pos=Meta+Shift+L,Meta+Shift+L,Move Window Right
 move_window_to_upper_pos=Meta+Shift+K,Meta+Shift+K,Move Window Up
 next_layout=Meta+\\\\,Meta+\\\\,Switch to the Next Layout
@@ -44,15 +45,15 @@ prev_layout=Meta+|,Meta+|,Switch to the Previous Layout
 push_window_to_master=none,Meta+Return,Push Active Window to Master Area
 rotate=Meta+R,Meta+R,Rotate
 rotate_part=Meta+Shift+R,Meta+Shift+R,Rotate Part
-rotate_reverse=none,,Rotate (Reverse)
+rotate_reverse=none,none,Rotate (Reverse)
 toggle_float_layout=Meta+Shift+F,Meta+Shift+F,Toggle Floating Layout
 toggle_monocle_layout=Meta+-,Meta+M,Toggle Monocle Layout
-toggle_quarter_layout=none,,Toggle Quarter Layout
-toggle_spiral_layout=none,,Toggle Spiral Layout
-toggle_spread_layout=none,,Toggle Spread Layout
-toggle_stair_layout=none,,Toggle Stair Layout
-toggle_three_column_layout=none,,Toggle Three Column Layout
-toggle_tile_layout=Meta+T,Meta+T,Toggle Tile Layout
+toggle_quarter_layout=none,none,Toggle Quarter Layout
+toggle_spiral_layout=none,none,Toggle Spiral Layout
+toggle_spread_layout=none,none,Toggle Spread Layout
+toggle_stair_layout=none,none,Toggle Stair Layout
+toggle_three_column_layout=none,none,Toggle Three Column Layout
+toggle_tile_layout=none,Meta+T,Toggle Tile Layout
 toggle_window_floating=Meta+F,Meta+F,Toggle Active Window Floating
 
 [clash-for-windows.desktop]
@@ -120,7 +121,7 @@ _k_friendly_name=Session Management
 [kwin]
 Activate Window Demanding Attention=Meta+Ctrl+A,Meta+Ctrl+A,Activate Window Demanding Attention
 Decrease Opacity=none,,Decrease Opacity of Active Window by 5%
-Edit Tiles=none,Meta+T,Toggle Tiles Editor
+Edit Tiles=Meta+Shift+T,Meta+T,Toggle Tiles Editor
 Expose=Ctrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)
 ExposeAll=Ctrl+F10\tLaunch (C),Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)
 ExposeClass=Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)
@@ -192,13 +193,13 @@ Walk Through Desktops=none,,Walk Through Desktops
 Walk Through Desktops (Reverse)=none,,Walk Through Desktops (Reverse)
 Walk Through Windows=Alt+Tab,Alt+Tab,Walk Through Windows
 Walk Through Windows (Reverse)=Alt+Shift+Backtab,Alt+Shift+Backtab,Walk Through Windows (Reverse)
-Walk Through Windows Alternative=none,,Walk Through Windows Alternative
-Walk Through Windows Alternative (Reverse)=none,,Walk Through Windows Alternative (Reverse)
+Walk Through Windows Alternative=Meta+J,,Walk Through Windows Alternative
+Walk Through Windows Alternative (Reverse)=,,Walk Through Windows Alternative (Reverse)
 Walk Through Windows of Current Application=Alt+`,Alt+`,Walk Through Windows of Current Application
 Walk Through Windows of Current Application (Reverse)=Alt+~,Alt+~,Walk Through Windows of Current Application (Reverse)
-Walk Through Windows of Current Application Alternative=none,,Walk Through Windows of Current Application Alternative
-Walk Through Windows of Current Application Alternative (Reverse)=none,,Walk Through Windows of Current Application Alternative (Reverse)
-Window Above Other Windows=none,,Keep Window Above Others
+Walk Through Windows of Current Application Alternative=,,Walk Through Windows of Current Application Alternative
+Walk Through Windows of Current Application Alternative (Reverse)=,,Walk Through Windows of Current Application Alternative (Reverse)
+Window Above Other Windows=Meta+T,,Keep Window Above Others
 Window Below Other Windows=none,,Keep Window Below Others
 Window Close=Alt+F4\tMeta+Q,Alt+F4,Close Window
 Window Fullscreen=none,,Make Window Fullscreen
@@ -212,7 +213,7 @@ Window Minimize=Meta+PgDown,Meta+PgDown,Minimize Window
 Window Move=none,,Move Window
 Window Move Center=none,,Move Window to the Center
 Window No Border=none,,Toggle Window Titlebar and Frame
-Window On All Desktops=none,,Keep Window on All Desktops
+Window On All Desktops=Meta+F12,,Keep Window on All Desktops
 Window One Desktop Down=Meta+Ctrl+Shift+Down,Meta+Ctrl+Shift+Down,Window One Desktop Down
 Window One Desktop Up=Meta+Ctrl+Shift+Up,Meta+Ctrl+Shift+Up,Window One Desktop Up
 Window One Desktop to the Left=Meta+Ctrl+Shift+Left,Meta+Ctrl+Shift+Left,Window One Desktop to the Left
@@ -279,11 +280,11 @@ view_zoom_out=none,Meta+-,Zoom Out
 
 [mediacontrol]
 _k_friendly_name=Media Controller
-mediavolumedown=none,none,Media volume down
-mediavolumeup=none,none,Media volume up
+mediavolumedown=none,,Media volume down
+mediavolumeup=none,,Media volume up
 nextmedia=Media Next,Media Next,Media playback next
 pausemedia=Media Pause,Media Pause,Pause media playback
-playmedia=none,none,Play media playback
+playmedia=none,,Play media playback
 playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
@@ -297,7 +298,7 @@ _k_friendly_name=Obsidian
 _launch=Meta+N,none,Obsidian
 
 [org.flameshot.Flameshot.desktop]
-Capture=Print,none,Take screenshot
+Capture=none,none,Take screenshot
 Configure=none,none,Configure
 Launcher=none,none,Open launcher
 _k_friendly_name=Flameshot
@@ -334,7 +335,7 @@ OpenWithoutScreenshot=none,none,Launch Spectacle without capturing
 RectangularRegionScreenShot=Meta+Shift+Print,Meta+Shift+Print,Capture Rectangular Region
 WindowUnderCursorScreenShot=Meta+Ctrl+Print,Meta+Ctrl+Print,Capture Window Under Cursor
 _k_friendly_name=Spectacle
-_launch=none,Print,Launch Spectacle
+_launch=Print,Print,Launch Spectacle
 
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness
@@ -369,6 +370,7 @@ activate widget 40=none,none,Activate Netspeed Widget Widget
 activate widget 44=none,none,Activate Event Calendar Widget
 activate widget 45=none,none,Activate Sticky Note Widget
 activate widget 5=none,none,Activate Application Launcher Widget
+activate widget 57=none,none,Activate Application Launcher Widget
 activate widget 70=none,none,Activate Total CPU Use Widget
 activate widget 77=none,none,Activate Event Calendar Widget
 activate widget 79=none,none,Activate Application Launcher Widget
