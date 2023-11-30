@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-patchfile=${1:-~/Scripts/firefox-omni.patch}
+patchfile=${1:-/home/aik2/Scripts/firefox-omni.patch}
 echo $patchfile
 omni=/usr/lib/firefox/browser/omni.ja
 
@@ -20,4 +20,4 @@ sudo cp -v $omni $omni.orig
 sudo cp -v /tmp/omni.ja $omni
 
 rm -rf /tmp/omni.ja /tmp/firefox-omni
-rm -rf ~/.cache/mozilla/firefox/*/startupCache
+rm -rf /home/aik2/.cache/mozilla/firefox/*/startupCache
