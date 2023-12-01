@@ -16,6 +16,7 @@ set PROXY_HTTP "http://$hostip:$port"
 # set -gx HTTPS_PROXY "$PROXY_HTTP"
 
 set -gx EDITOR nvim
+set -gx VISUAL nvim
 
 function unset_proxy
     set -e http_proxy
@@ -33,10 +34,10 @@ end
 fzf_configure_bindings --directory=\cf
 bind \co lfcd
 
-alias ls="exa --group-directories-first --icons"
-alias la="exa -l -a --group-directories-first --icons"
-alias ll="exa -l --group-directories-first --icons"
-alias l.="exa -a --group-directories-first --icons | egrep '^\.'"                                     # show only dotfiles
+alias ls="eza -b --group-directories-first --icons"
+alias la="eza -b -l -a --group-directories-first --icons"
+alias ll="eza -b -l --group-directories-first --icons"
+alias l.="eza -b -a --group-directories-first --icons | egrep '^\.'"                                     # show only dotfiles
 
 alias ra="ranger-cd"
 alias vim="nvim"
