@@ -3,7 +3,8 @@ set -gx PATH "$HOME/.npm-global/bin" $PATH
 set -gx PATH "/opt/cuda/bin" $PATH
 set -gx GEM_HOME "$HOME/.local/share/gem/ruby/3.0.0/bin"
 set -gx PATH $GEM_HOME $PATH
-set -x MANPAGER "nvim +Man!"
+set -gx MANPAGER "nvim +Man!"
+set -gx BAT_THEME "Kanagawa"
 
 # set hostip (cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
 # if not in wsl, uncomment this line
