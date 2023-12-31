@@ -2,18 +2,6 @@ set selection-clipboard clipboard
 set selection-notification false
 set adjust-open "width"
 
-set recolor
-set recolor-lightcolor \#CFE8CC
-set recolor-darkcolor \#000000
-set recolor-keephue
-set default-bg \#222230
-set inputbar-bg \#222230
-set inputbar-fg \#DDDDDD
-set notification-bg \#222230
-set notification-fg \#DDDDDD
-set statusbar-bg \#222230
-set statusbar-fg \#DDDDDD
-
 set scroll-step 80
 set first-page-column 1:1
 
@@ -29,3 +17,19 @@ map [normal] <A-Right> jumplist forward
 
 map <C-m> feedkeys ":bmark"
 map <C-g> feedkeys ":blist <Tab>"
+
+include theme-kanagawa
+
+set recolor
+set recolor-keephue
+
+## My Theme
+# set recolor-lightcolor \#CFE8CC
+# set recolor-darkcolor \#000000
+# set default-bg \#222230
+# set inputbar-bg \#222230
+# set inputbar-fg \#DDDDDD
+# set notification-bg \#222230
+# set notification-fg \#DDDDDD
+# set statusbar-bg \#222230
+# set statusbar-fg \#DDDDDD
