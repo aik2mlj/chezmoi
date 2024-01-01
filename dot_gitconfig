@@ -6,6 +6,9 @@
 ; [http]
 ; 	proxy = http://127.0.0.1:7890
 
+[include]
+    path = ~/.config/delta/themes.gitconfig
+
 [core]
     pager = delta
 
@@ -13,6 +16,10 @@
     diffFilter = delta --color-only
 
 [delta]
+    features = arctic-fox
+    side-by-side = false
+    syntax-theme = Kanagawa
+    ; line-numbers = false
     navigate = true    # use n and N to move between diff sections
     light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
 
