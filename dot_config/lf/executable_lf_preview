@@ -1,20 +1,24 @@
 #!/usr/bin/env bash
 
 file=$1
-w=$2
-h=$3
-x=$4
-y=$5
 
-if [[ "$( file -Lb --mime-type "$file")" =~ ^image ]]; then
-    kitty +kitten icat --silent --stdin no --transfer-mode file --place "${w}x${h}@${x}x${y}" "$file" < /dev/null > /dev/tty
-    exit 1
-fi
-
-MIME=$(mimetype --all --brief "$1")
-#echo "$MIME"
+# MIME=$(mimetype --all --brief "$1")
+MIME=$(file -Lb --mime-type "$file")
 
 case "$MIME" in
+    # images
+    *image/*)
+        w=$2
+        h=$3
+        x=$4
+        y=$5
+        kitty +kitten icat --silent --stdin no --transfer-mode file --place "${w}x${h}@${x}x${y}" "$1" < /dev/null > /dev/tty
+        exit 1
+        ;;
+    # video & audio
+    *video/* | *audio/*)
+        exiftool "$1" || mediainfo "1"
+        ;;
     # .pdf
     *application/pdf*)
         pdftotext "$1" -
@@ -22,6 +26,9 @@ case "$MIME" in
     # .7z
     *application/x-7z-compressed*)
         7z l "$1"
+        ;;
+    *application/gzip*)
+        gzip -l "$1"
         ;;
     # .tar .tar.Z
     *application/x-tar*)
@@ -40,13 +47,13 @@ case "$MIME" in
         unzip -l "$1"
         ;;
     # any plain text file that doesn't have a specific handler
-    *text/plain*)
+    *text/*)
         # return false to always repaint, in case terminal size changes
         bat --force-colorization --paging=never --style=changes \
             --terminal-width $(($2 - 3)) "$1" && false
         ;;
     *)
-        echo "unknown format"
+        echo "unknown format: $MIME"
         ;;
 esac
 # pistol "$file"
