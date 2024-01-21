@@ -34,7 +34,8 @@ function set_proxy
 end
 
 fzf_configure_bindings --directory=\cf
-bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
+# bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
+bind \co ranger-cd
 
 alias ls="eza -b --group-directories-first --icons"
 alias la="eza -b -l -a --group-directories-first --icons"
