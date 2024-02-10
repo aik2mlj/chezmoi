@@ -1,0 +1,282 @@
+﻿---
+name: toki_pona
+version: 0.3.0
+sort: by_weight
+use_preset_vocabulary: true
+...
+
+# Pronouns
+吾	mi
+汝	sina
+彼	ona
+
+# Human
+人	jan
+男	mije
+女	meli
+親	mama
+身	sijelo
+手	luka
+足	noka
+口	uta
+目	oko
+眾	kulupu
+死	moli
+
+# Demonstrative
+此	ni
+
+# Conjunction
+若	anu
+及	en
+但	taso
+亦	kin
+
+# Particles
+者	li
+於	o
+吁	a
+無	ala
+乎	e
+也	la
+
+# Question
+何	seme
+
+# Determiner
+皆	ali
+全	ale
+
+# Prepositions
+在	lon
+于	tawa
+以	kepeken
+如	sama
+由	tan
+傍	poka
+之	pi
+
+# Adjectives
+善	pona
+惡	ike
+汙	jaki
+愚	nasa
+大	suli
+小	lili
+多	mute
+主	lawa
+溫	seli
+上	sewi
+下	anpa
+後	monsi
+內	insa
+新	sin
+異	ante
+益	namako
+
+# Sensation
+感	pilin
+甘	suwi
+音	kalama
+寒	lete
+聽	kute
+絲	linja
+見	lukin
+
+# Basic Verbs
+有	jo
+欲	wile
+敗	pakala
+媾	unpa
+書	sitelen
+來	kama
+施	pana
+寐	lape
+知	sona
+竟	pini
+去	weka
+能	ken
+樂	musi
+作	pali
+強	wawa
+俟	awen
+狩	alasa
+愛	olin
+開	open
+
+# Nature
+日	suno
+月	mun
+水	telo
+石	kiwen
+氣	kon
+草	kasi
+膏	ko
+
+# Animals
+畜	soweli
+鳥	waso
+獸	akesi
+魚	kala
+蟲	pipi
+牟	mu
+山	nena
+
+# Food
+食	moku
+果	kili
+米	pan
+
+# Artifact
+器	ilo
+物	ijo
+邦	ma
+言	toki
+衣	len
+家	tomo
+鬭	utala
+皿	poki
+牀	supa
+葉	lipu
+穴	lupa
+杖	palisa
+皮	selo
+圓	sike
+壁	sinpin
+金	mani
+市	esun
+
+# Abstract
+道	nasin
+時	tenpo
+名	nimi
+
+# Colors
+色	kule
+赤	loje
+黃	jelo
+青	laso
+黑	pimeja
+白	walo
+
+# Numerals
+一	wan
+二	tu
+數	nanpa
+
+# Phrases
+言善
+家于
+于樂
+
+# ？不？
+善不善
+
+# 于
+于吾
+于汝
+于家
+于邦
+
+# Countries / Cities
+歐羅巴	Elopa
+加拿大	Kanata
+意大利	Italija
+德意志	Tosi
+英吉利	Inli
+法蘭西	Kanse
+墨西哥	Mesiko
+西班牙	Epanja
+濠太剌利	Oselija
+澳大利亞	Oselija
+中國	Sonko
+日本	Nijon
+倫敦	Lantan
+柏林	Perlin
+亞特蘭大	Alenta
+羅馬	Loma
+
+# Languages
+希望	Epelanto
+
+# Autonym
+文言	Munjan
+
+# Non-pu
+經	pu
+典	ku
+巖	ewe
+
+
+方	leko
+反	jasima
+銳	kiki
+超	ete
+旨	jami
+
+中	tonsi
+雄	epiku
+醫	misikeke
+
+鼬	kijetesantakalu
+鬼	monsuta
+菌	soko
+鰐	kokosila
+
+思	isipin
+
+
+亂	kamalawala
+虹	kese
+
+唯	kulijo
+笑	kuntu
+取	lanpan
+网	linluwi
+央	meso
+
+磨	melome
+陽	mijomi
+
+鼠	misa
+餅	mulapisu
+焉	n
+
+聯	natu
+諾	oke
+別	omekapo
+柔	puwa
+
+三	san
+三	tuli
+四	po
+
+左	soto
+右	teje
+
+著	taki
+
+曰	te
+云	to
+
+紫	unu
+巫	usawi
+
+嗚	wa
+題	waleja
+往	wekama
+壞	yupekosi
+罪	apeja
+與	kan
+紺	kapesi
+
+切	kipisi
+
+古	majuna
+
+止	pake
+兄	pata
+
+虛	powe
+鴨嘴	sutopatikuna
+
