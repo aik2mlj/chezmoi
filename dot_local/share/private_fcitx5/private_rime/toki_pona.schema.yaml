@@ -1,0 +1,66 @@
+schema:
+  schema_id: toki_pona
+  name: 言善
+  version: 0.3.0
+  author:
+    - mkpoli <il.opkm@mkpo.li>
+  description: |
+    言善以書文言。
+    toki pona kepeken sitelen Munjan.
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [中文, 西文]
+  - name: half_shape
+    states: [全角, 半角]
+  - name: simplification
+    states: [漢字, 汉字]
+  - name: ascii_punct
+    states: [。，, ．，]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcbaABCDEFGHIJKLMNOPQRS
+  delimiter: " '"
+  algebra:
+    - "xform/'//"
+    - abbrev/^([a-z]).+$/$1/
+
+translator:
+  dictionary: toki_pona
+  spelling_hints: 8
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[A-Za-z]*'?$"
