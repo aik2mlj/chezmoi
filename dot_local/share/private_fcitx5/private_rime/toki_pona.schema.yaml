@@ -46,9 +46,9 @@ engine:
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaABCDEFGHIJKLMNOPQRS
   delimiter: " '"
-  algebra:
-    - "xform/'//"
-    - abbrev/^([a-z]).+$/$1/
+  # algebra:
+  #   - "xform/'//"
+  #   - abbrev/^([a-z]).+$/$1/
 
 translator:
   dictionary: toki_pona

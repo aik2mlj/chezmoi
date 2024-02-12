@@ -1,0 +1,59 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: sitelen_pona
+  name: sitelen pona
+  version: "2023.01.07"
+
+engine:
+  processors:
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+
+speller:
+  alphabet: aeijklmnopstuw
+  delimiter: " '"
+  # algebra:
+  #   # - "xform/'//"
+  #   - 'abbrev/^([aeijklmnopstuw]).+$/$1/'
+
+translator:
+  dictionary: sitelen_pona
+  enable_user_dict: false
+  spelling_hints: 8
+
+punctuator:
+  half_shape: &symtable
+    "-": "‍"
+    "+": "‍"
+    " ": "　"
+    "<": 「
+    ">": 」
+    "`": "︀"
+    "~": "︁"
+    "[": 󱦐
+    "]": 󱦑
+    "^": 󱦕
+    "*": 󱦖
+    "(": 󱦗
+    ")": 󱦘
+    "{": 󱦚
+    "}": 󱦛
+    ".": 󱦜
+    ":": 󱦝
+  full_shape: *symtable
+
+key_binder:
+  import_preset: default

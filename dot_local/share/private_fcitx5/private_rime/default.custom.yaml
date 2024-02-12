@@ -4,4 +4,5 @@ patch:
   schema_list:
     - schema: double_pinyin_flypy    # 小鹤双拼
     - schema: toki_pona
+    - schema: sitelen_pona
   # 以下可根据自己所需进行自定义，仅做参考。

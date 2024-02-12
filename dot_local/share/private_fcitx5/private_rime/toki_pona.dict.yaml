@@ -2,7 +2,7 @@
 name: toki_pona
 version: 0.3.0
 sort: by_weight
-use_preset_vocabulary: true
+use_preset_vocabulary: false
 ...
 
 # Pronouns
