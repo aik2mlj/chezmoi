@@ -53,6 +53,7 @@ speller:
 translator:
   dictionary: toki_pona
   spelling_hints: 8
+  always_show_comments: true
 
 punctuator:
   import_preset: default
