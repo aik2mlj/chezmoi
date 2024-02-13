@@ -33,6 +33,7 @@ translator:
   dictionary: sitelen_pona
   enable_user_dict: false
   spelling_hints: 8
+  always_show_comments: true
 
 punctuator:
   half_shape: &symtable

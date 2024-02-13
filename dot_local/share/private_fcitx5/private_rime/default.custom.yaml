@@ -6,3 +6,9 @@ patch:
     - schema: toki_pona
     - schema: sitelen_pona
   # 以下可根据自己所需进行自定义，仅做参考。
+  menu/page_size: 5 # 配置候选项数量为 5 个
+  key_binder/bindings:
+    - { when: has_menu, accept: equal, send: Page_Down } # =向下翻页
+    - { when: has_menu, accept: minus, send: Page_Up } # -向上翻页
+    - { when: has_menu, accept: period, send: Page_Down } # 句号向下翻页
+    - { when: has_menu, accept: comma, send: Page_Up } # 逗号向上翻页
