@@ -1,0 +1,21 @@
+[Desktop Entry]
+Categories=Network;Application;
+Comment[en_US]=Zoom Video Conference
+Comment=Zoom Video Conference
+Encoding=UTF-8
+Exec=env QT_IM_MODULE=fcitx /usr/bin/zoom %U
+GenericName[en_US]=
+GenericName=
+Icon=Zoom
+MimeType=application/x-zoom;
+Name[en_US]=Zoom
+Name=Zoom
+Path=
+StartupNotify=true
+StartupWMClass=zoom
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-Protocols=zoommtg;zoomus;tel;callto;zoomphonecall;
+X-KDE-SubstituteUID=false
+X-KDE-Username=
