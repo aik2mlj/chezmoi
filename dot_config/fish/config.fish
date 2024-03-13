@@ -4,7 +4,6 @@ set -gx PATH "/opt/cuda/bin" $PATH
 set -gx GEM_HOME "$HOME/.local/share/gem/ruby/3.0.0/bin"
 set -gx PATH $GEM_HOME $PATH
 set -gx MANPAGER "nvim +Man!"
-set -gx BAT_THEME "Kanagawa"
 
 # set hostip (cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
 # if not in wsl, uncomment this line
@@ -113,7 +112,7 @@ alias mount_gsd='rclone mount --vfs-cache-mode writes --vfs-cache-max-size 5G --
 
 # color scheme git@github.com:aik2mlj/fish-color-scheme-switcher.git
 # scheme set tokyonight
-kanagawa
+# kanagawa
 
 zoxide init fish | source
 
