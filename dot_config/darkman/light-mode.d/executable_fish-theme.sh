@@ -1,3 +1,3 @@
-#!/bin/sh
+#!/bin/fish
 
-fish_config theme save fish\ default
+yes | fish_config theme save Tomorrow
