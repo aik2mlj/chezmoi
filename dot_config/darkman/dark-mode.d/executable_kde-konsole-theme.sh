@@ -16,6 +16,9 @@ for i in "${KONSOLEPIDS[@]}"
         for x in $(seq 1 $CURRENTSESSIONCOUNT)
             do 
                 # change profile through dbus message
-                qdbus org.kde.konsole-$i /Sessions/$x setProfile "Breath"
+                qdbus org.kde.konsole-$i /Sessions/$x setProfile "Dark"
             done
     done
+
+# change default profile
+sed -i 's/DefaultProfile.*/DefaultProfile=Dark.profile/' $HOME/.config/konsolerc
