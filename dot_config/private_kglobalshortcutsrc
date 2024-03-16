@@ -290,6 +290,9 @@ repeat_action=none,Ctrl+Alt+R,Manually Invoke Action on Current Clipboard
 show-barcode=none,none,Show Barcode…
 show-on-mouse-pos=none,Meta+V,Open Klipper at Mouse Position
 
+[services][darkman.desktop]
+_launch=Meta+Shift+D
+
 [services][firefox.desktop]
 _launch=Meta+W
 
@@ -304,9 +307,6 @@ ActiveWindowScreenShot=none
 
 [services][systemsettings.desktop]
 _launch=Meta+,
-
-[services][{d9b77019-e45a-4bc6-b1ea-e114bee38cbd}.desktop]
-_launch=Meta+Print
 
 [wacomtablet]
 Map to fullscreen=Meta+Ctrl+F,Meta+Ctrl+F,Map to fullscreen
