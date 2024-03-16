@@ -305,6 +305,9 @@ _launch=Meta+N
 [services][org.kde.spectacle.desktop]
 ActiveWindowScreenShot=none
 
+[services][spectacle-ocr.sh.desktop]
+_launch=Meta+Print
+
 [services][systemsettings.desktop]
 _launch=Meta+,
 
