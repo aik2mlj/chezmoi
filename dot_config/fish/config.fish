@@ -41,21 +41,24 @@ alias la="eza -b -l -a --group-directories-first --icons"
 alias ll="eza -b -l --group-directories-first --icons"
 alias l.="eza -b -a --group-directories-first --icons | egrep '^\.'"                                     # show only dotfiles
 
-alias ra="ranger-cd"
-alias vim="nvim"
-alias df="df -h"
 alias rm="/bin/rm -v > ~/.rm.log"
-alias sys="sudo systemctl"
 
-alias lg="lazygit"
-alias gs="git status"
-alias gl="git log --graph --full-history --all --color --pretty=tformat:\"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m\""
+# let's use abbr
 
-alias fs="fluidsynth --quiet /usr/share/sounds/sf2/GeneralUser\ GS\ v1.471.sf2"
-alias top="btop"
-alias nvd="watch -n 1 nvidia-smi"
+abbr svim sudo -E nvim
+abbr sys sudo systemctl
 
-# alias fd="fd -IH"
+abbr vim nvim
+abbr df df -h
+abbr ra ranger-cd
+abbr top btop
+abbr nvd watch -n 1 nvidia-smi
+
+abbr lg lazygit
+abbr gs git status
+abbr gl "git log --graph --full-history --all --color --pretty=tformat:\"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m\""
+
+abbr fs "fluidsynth --quiet /usr/share/sounds/sf2/GeneralUser\ GS\ v1.471.sf2"
 
 # ====== Copied from garuda's fish config
 ## Starship prompt
