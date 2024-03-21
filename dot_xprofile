@@ -25,11 +25,11 @@ xbanish &
 timidity -iA &
 
 # fcitx5 variables
-XMODIFIERS=@im=fcitx
-GLFW_IM_MODULE=ibus
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-SDL_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export GLFW_IM_MODULE=ibus
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
 
 # firefox
-MOZ_USE_XINPUT2=1
+export MOZ_USE_XINPUT2=1
