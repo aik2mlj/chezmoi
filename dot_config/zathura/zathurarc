@@ -18,7 +18,7 @@ map [normal] <A-Right> jumplist forward
 map <C-m> feedkeys ":bmark"
 map <C-g> feedkeys ":blist <Tab>"
 
-include theme-kanagawa
+include kanagawa-light
 
 set recolor
 set recolor-keephue
