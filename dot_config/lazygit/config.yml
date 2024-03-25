@@ -1,4 +1,3 @@
-# git:
-#   paging:
-#     colorArg: always
-#     pager: delta --dark --paging=never
+git:
+  paging:
+    externalDiffCommand: difft --color=always
