@@ -23,8 +23,8 @@ set inputbar-fg                 "#1F1F28"
 set statusbar-bg                "#DCD7BA"
 set statusbar-fg                "#1F1F28"
 
-set highlight-color             "#FFA066"
-set highlight-active-color      "#FF5D62"
+set highlight-color             rgba(139,164,176,0.5)
+set highlight-active-color      rgba(162,146,163,0.5)
 
 set default-bg                  "#EDE9CE"
 set default-fg                  "#1F1F28"

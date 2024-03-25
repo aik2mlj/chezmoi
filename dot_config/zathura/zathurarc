@@ -4,6 +4,7 @@ set adjust-open "width"
 
 set scroll-step 80
 set first-page-column 1:1
+set font "FiraCode Nerd Font 11"
 
 map [normal] D :set first-page-column 1:2
 
@@ -18,7 +19,7 @@ map [normal] <A-Right> jumplist forward
 map <C-m> feedkeys ":bmark"
 map <C-g> feedkeys ":blist <Tab>"
 
-include kanagawa-light
+include kanagawa-dark
 
 set recolor
 set recolor-keephue
