@@ -49,7 +49,7 @@ map gd cd ~/Downloads
 map gr cd ~/repos
 map gt cd ~/tmp-sync
 
-map zd $dragon-drop -a -x $f
+map <c-d> $dragon-drop -a -x $f
 
 # dedicated keys for file opener actions
 map o &mimeopen $f
