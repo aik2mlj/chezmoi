@@ -9,12 +9,12 @@ set completion-bg               "#DCD7BA"
 set completion-fg               "#1F1F28"
 set completion-group-bg         "#DCD7BA"
 set completion-group-fg         "#2A2A37"
-set completion-highlight-bg     "#938AA9"
+set completion-highlight-bg     "#C9CBD1"
 set completion-highlight-fg     "#1F1F28"
 
-set index-bg                    "#EDE9CE"
+set index-bg                    "#F1E8CF"
 set index-fg                    "#1F1F28"
-set index-active-bg             "#938AA9"
+set index-active-bg             "#C9CBD1"
 set index-active-fg             "#1F1F28"
 
 set inputbar-bg                 "#DCD7BA"
@@ -26,11 +26,11 @@ set statusbar-fg                "#1F1F28"
 set highlight-color             rgba(139,164,176,0.5)
 set highlight-active-color      rgba(162,146,163,0.5)
 
-set default-bg                  "#EDE9CE"
+set default-bg                  "#F1E8CF"
 set default-fg                  "#1F1F28"
 set render-loading              "true"
-set render-loading-bg           "#EDE9CE"
+set render-loading-bg           "#F1E8CF"
 set render-loading-fg           "#1F1F28"
 
-set recolor-lightcolor          "#EDE9CE"
+set recolor-lightcolor          "#F1E8CF"
 set recolor-darkcolor           "#1F1F28"
