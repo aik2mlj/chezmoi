@@ -19,7 +19,7 @@ map [normal] <A-Right> jumplist forward
 map <C-m> feedkeys ":bmark"
 map <C-g> feedkeys ":blist <Tab>"
 
-include kanagawa-dark
+include kanagawa-light
 
 set recolor
 set recolor-keephue
