@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-kitty +kitten themes Gruvbox\ Light\ Hard
+sed -i 's/^include.*/include light.conf/' $HOME/.config/kitty/kitty.conf
 
 # reload all kitty instances
 KITTYPIDS=($(pidof kitty))
