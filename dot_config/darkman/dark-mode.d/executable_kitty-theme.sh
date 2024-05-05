@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-kitty +kitten themes kanagawabones
+sed -i 's/^include.*/include dark.conf/' $HOME/.config/kitty/kitty.conf
 
 # reload all kitty instances
 KITTYPIDS=($(pidof kitty))
