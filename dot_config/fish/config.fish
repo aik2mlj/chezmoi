@@ -8,7 +8,7 @@ set -gx MANPAGER "nvim +Man!"
 # set hostip (cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
 # if not in wsl, uncomment this line
 set hostip 127.0.0.1
-set port 7890
+set port 7897
 
 set PROXY_HTTP "http://$hostip:$port"
 # set -gx http_proxy "$PROXY_HTTP"
