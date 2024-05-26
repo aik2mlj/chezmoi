@@ -5,19 +5,14 @@ set -gx GEM_HOME "$HOME/.local/share/gem/ruby/3.0.0/bin"
 set -gx PATH $GEM_HOME $PATH
 set -gx MANPAGER "nvim +Man!"
 
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+
 # set hostip (cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
 # if not in wsl, uncomment this line
 set hostip 127.0.0.1
 set port 7897
-
 set PROXY_HTTP "http://$hostip:$port"
-# set -gx http_proxy "$PROXY_HTTP"
-# set -gx HTTP_PROXY "$PROXY_HTTP"
-# set -gx https_proxy "$PROXY_HTTP"
-# set -gx HTTPS_PROXY "$PROXY_HTTP"
-
-set -gx EDITOR nvim
-set -gx VISUAL nvim
 
 function unset_proxy
     set -e http_proxy
@@ -31,6 +26,8 @@ function set_proxy
     set -gx https_proxy "$PROXY_HTTP"
     set -gx HTTPS_PROXY "$PROXY_HTTP"
 end
+
+set_proxy
 
 fzf_configure_bindings --directory=\cf
 bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint'
