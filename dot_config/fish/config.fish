@@ -1,6 +1,6 @@
 set -gx PATH "$HOME/.local/bin" $PATH
 set -gx PATH "$HOME/.npm-global/bin" $PATH
-set -gx PATH "/opt/cuda/bin" $PATH
+set -gx PATH /opt/cuda/bin $PATH
 set -gx GEM_HOME "$HOME/.local/share/gem/ruby/3.0.0/bin"
 set -gx PATH $GEM_HOME $PATH
 set -gx MANPAGER "nvim +Man!"
@@ -36,7 +36,7 @@ bind \co 'set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f 
 alias ls="eza -b --group-directories-first --icons"
 alias la="eza -b -l -a --group-directories-first --icons"
 alias ll="eza -b -l --group-directories-first --icons"
-alias l.="eza -b -a --group-directories-first --icons | egrep '^\.'"                                     # show only dotfiles
+alias l.="eza -b -a --group-directories-first --icons | egrep '^\.'" # show only dotfiles
 
 alias rm="/bin/rm -v > ~/.rm.log"
 
@@ -59,9 +59,9 @@ abbr fs "fluidsynth --quiet /usr/share/sounds/sf2/GeneralUser\ GS\ v1.471.sf2"
 
 # ====== Copied from garuda's fish config
 ## Starship prompt
-set VIRTUAL_ENV_DISABLE_PROMPT "1"
+set VIRTUAL_ENV_DISABLE_PROMPT 1
 if status is-interactive
-   source ("/usr/bin/starship" init fish --print-full-init | psub)
+    source ("/usr/bin/starship" init fish --print-full-init | psub)
 end
 
 # Fish command history
@@ -77,8 +77,8 @@ end
 function copy
     set count (count $argv | tr -d \n)
     if test "$count" = 2; and test -d "$argv[1]"
-	set from (echo $argv[1] | trim-right /)
-	set to (echo $argv[2])
+        set from (echo $argv[1] | trim-right /)
+        set to (echo $argv[2])
         command cp -r $from $to
     else
         command cp $argv
@@ -94,9 +94,9 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias hw='hwinfo --short'                                   # Hardware Info
-alias big="expac -H M '%m\t%n' | sort -h | nl"              # Sort installed packages according to size in MB
-alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'			# List amount of -git packages
+alias hw='hwinfo --short' # Hardware Info
+alias big="expac -H M '%m\t%n' | sort -h | nl" # Sort installed packages according to size in MB
+alias gitpkg='pacman -Q | grep -i "\-git" | wc -l' # List amount of -git packages
 alias jctl="journalctl -p 3 -xb"
 
 # Cleanup orphaned packages
