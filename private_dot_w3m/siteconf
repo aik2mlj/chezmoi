@@ -1,0 +1,17 @@
+url m!^https?://([a-z]+\.)?twitter\.com/!
+substitute_url "https://nitter.kavin.rocks/"
+
+url m!^https?://([a-z]+\.)?reddit\.com/!
+substitute_url "https://redlib.catsarch.com/"
+
+#url m!^https?://([a-z]+\.)?google\.com/!
+#substitute_url "https://lite.duckduckgo.com/lite/"
+
+url m!^https?://([a-z]+\.)?imgur\.com/!
+substitute_url "https://rimgo.pussthecat.org/"
+
+url "https://fandom.com/" exact
+substitute_url "https://breezewiki.pussthecat.org/"
+
+url "https://medium.com/" exact
+substitute_url "https://scribe.rip/"
