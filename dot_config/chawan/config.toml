@@ -1,0 +1,5 @@
+[external]
+cgi-dir = ["/usr/lib/chawan/cgi-bin"]
+
+[buffer]
+images = true
