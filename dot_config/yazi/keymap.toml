@@ -16,6 +16,22 @@ run = '''
 '''
 desc = "Execute the scripts"
 
+[[manager.prepend_keymap]]
+on = ["J"]
+run = "arrow 5"
+
+[[manager.prepend_keymap]]
+on = ["K"]
+run = "arrow -5"
+
+[[manager.prepend_keymap]]
+on = ["<A-j>"]
+run = "seek 5"
+
+[[manager.prepend_keymap]]
+on = ["<A-k>"]
+run = "seek -5"
+
 [[input.prepend_keymap]]
 on = ["<Esc>"]
 run = "close"
