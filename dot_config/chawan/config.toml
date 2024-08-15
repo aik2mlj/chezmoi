@@ -1,5 +1,8 @@
-[external]
-cgi-dir = ["/usr/lib/chawan/cgi-bin"]
+# [external]
+# cgi-dir = ["/usr/lib/chawan/cgi-bin/"]
 
 [buffer]
 images = true
+cookie = true
+autofocus = true
+# scripting = true
