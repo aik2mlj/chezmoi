@@ -27,7 +27,7 @@ function set_proxy
     set -gx HTTPS_PROXY "$PROXY_HTTP"
 end
 
-set_proxy
+# set_proxy
 
 fzf_configure_bindings --directory=\cf
 bind \co "yazi-cd; commandline -f repaint"
