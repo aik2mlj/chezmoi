@@ -3,7 +3,7 @@ Categories=Network;Application;
 Comment[en_US]=Zoom Video Conference
 Comment=Zoom Video Conference
 Encoding=UTF-8
-Exec=env QT_IM_MODULE=fcitx /usr/bin/zoom %U
+Exec=env QT_IM_MODULE=fcitx XDG_CURRENT_DESKTOP=gnome /usr/bin/zoom %U
 GenericName[en_US]=
 GenericName=
 Icon=Zoom
