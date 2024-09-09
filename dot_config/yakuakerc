@@ -1,11 +1,12 @@
 [Appearance]
 BackgroundColorOpacity=70
 Blur=true
-Skin=materia-dark
+Skin=monochrome
+SkinInstalledWithKns=true
 Translucency=true
 
 [Desktop Entry]
-DefaultProfile=Garuda.profile
+DefaultProfile=Light.profile
 
 [Dialogs]
 FirstRun=false
@@ -19,6 +20,6 @@ detailViewIconSize=16
 hinding_title_bar=false
 
 [Window]
-Height=52
 KeepOpen=false
+ShowSystrayIcon=false
 ShowTitleBar=false
