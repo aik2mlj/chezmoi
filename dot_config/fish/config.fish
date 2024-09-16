@@ -51,6 +51,7 @@ abbr df df -h
 abbr ra ranger-cd
 abbr top btop
 abbr nvd watch -n 1 nvidia-smi
+abbr cal calcurse
 
 abbr lg lazygit
 abbr gs git status
