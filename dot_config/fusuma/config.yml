@@ -5,25 +5,25 @@ swipe:
     # left:
     #   sendkey: 'LEFTALT+RIGHT' # History forward
     up:
-      sendkey: 'LEFTCTRL+T' # Open new tab
-      keypress:
-        LEFTSHIFT:
-          sendkey: 'LEFTCTRL+LEFTSHIFT+T' # Open last closed tab
+      command: "ydotool key 29:1 20:1 20:0 29:0"  # ctrl+t
+      # keypress:
+      #   LEFTSHIFT:
+      #     command: "ydotool key 29:1 42:1 20:1 20:0 42:0 29:0"  # ctrl+shift+t
     down:
-      sendkey: 'LEFTCTRL+W' # Close tab
-  4:
-    left:
-      command: 'xdotool key --clearmodifiers super+v' # right desktop
-      keypress:
-        LEFTSHIFT: 
-          window: 'next' # Move window to next workspace
+      command: "ydotool key 29:1 17:1 17:0 29:0"  # ctrl+w
+  # 4:
+  #   left:
+  #     command: "ydotool key 125:1 47:1 47:0 125:0" # right desktop super+v
+      # keypress:
+      #   LEFTSHIFT: 
+      #     window: 'next' # Move window to next workspace
         # LEFTMETA:
         #   command: 'xdotool key --clearmodifiers super+ctrl+Right' # Move window to left side
-    right:
-      command: 'xdotool key --clearmodifiers super+c' # left desktop
-      keypress:
-        LEFTSHIFT: 
-          window: 'prev' # Move window to previous workspace
+    # right:
+    #   command: "ydotool key 125:1 46:1 46:0 125:0" # right desktop super+c
+      # keypress:
+      #   LEFTSHIFT: 
+      #     window: 'prev' # Move window to previous workspace
         # LEFTMETA:
         #   command: 'xdotool key --clearmodifiers super+ctrl+Right'  # Move window to right side
   #   up:
