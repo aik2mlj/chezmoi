@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-patchfile=${1:-/home/aik2/Scripts/firefox-omni.patch}
+patchfile=${1:-$(dirname "$0")/firefox-omni.patch}
 echo $patchfile
 omni=/usr/lib/firefox/browser/omni.ja
 

@@ -1,0 +1,11 @@
+# ln -s this to /etc/pacman.d/hooks/
+
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = firefox
+
+[Action]
+Description = Applying custom Firefox omni patch (unreserve CTRL+W) ...
+When = PostTransaction
+Exec = /home/aik2/Scripts/patch-firefox-omni.sh
