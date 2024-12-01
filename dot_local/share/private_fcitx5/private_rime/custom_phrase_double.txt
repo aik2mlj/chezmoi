@@ -105,7 +105,10 @@
 刚刚	gg
 才刚刚	cgg
 不知道	bzd
-哈哈	hh
+哈哈哈	hhh
+哈哈哈哈	hhhh
+哈哈哈哈哈	hhhhh
+哈哈哈哈哈哈	hhhhhh
 看看	kk
 因为	yw
 什么	sm
