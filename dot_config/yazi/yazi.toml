@@ -4,3 +4,13 @@ linemode = "size"
 
 [preview]
 wrap = "yes"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"
