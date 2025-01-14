@@ -13,5 +13,5 @@ patch:
     - { when: has_menu, accept: period, send: Page_Down } # 句号向下翻页
     - { when: has_menu, accept: comma, send: Page_Up } # 逗号向上翻页
   # shift键英文上屏
-  ascii_composer/switch_key/Shift_L: commit_code
-  ascii_composer/switch_key/Shift_R: commit_code
+  # ascii_composer/switch_key/Shift_L: commit_code
+  # ascii_composer/switch_key/Shift_R: commit_code
