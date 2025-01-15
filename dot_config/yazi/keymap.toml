@@ -36,3 +36,8 @@ run = "seek -5"
 on = ["<Esc>"]
 run = "close"
 desc = "Cancel input"
+
+[[manager.prepend_keymap]]
+on   = "!"
+run  = 'shell "$SHELL" --block'
+desc = "Open shell here"
