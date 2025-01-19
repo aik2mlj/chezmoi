@@ -10,6 +10,7 @@ EnumerateSkipFirst=False
 
 [Hotkey/AltTriggerKeys]
 0=Shift_L
+1=Shift+Shift_R
 
 [Hotkey/EnumerateForwardKeys]
 0=Control+Shift_L
@@ -47,6 +48,8 @@ EnumerateSkipFirst=False
 [Behavior]
 # Active By Default
 ActiveByDefault=False
+# Reset state on Focus In
+resetStateWhenFocusIn=No
 # Share Input State
 ShareInputState=No
 # Show preedit in application
@@ -69,6 +72,12 @@ CustomXkbOption=
 EnabledAddons=
 # Preload input method to be used by default
 PreloadInputMethod=True
+# Allow input method in the password field
+AllowInputMethodForPassword=False
+# Show preedit text when typing password
+ShowPreeditForPassword=False
+# Interval of saving user data in minutes
+AutoSavePeriod=30
 
 [Behavior/DisabledAddons]
 0=chttrans
