@@ -7,13 +7,14 @@ Exec=env QT_IM_MODULE=fcitx /usr/bin/wpp %F
 GenericName[en_US]=WPS Presentation
 GenericName=WPS Presentation
 GenericName[zh_CN]=WPS 演示
-Icon=wps-office2019-wppmain
+Icon=wps-office2023-wppmain
 InitialPreference=3
 MimeType=application/wps-office.pptx;application/wps-office.ppt;application/wps-office.potx;application/wps-office.pot;application/wps-office.dpt;application/wps-office.dpss;application/wps-office.dpso;application/wps-office.dps;application/vnd.openxmlformats-officedocument.presentationml.slideshow;application/vnd.openxmlformats-officedocument.presentationml.presentation;application/vnd.ms-powerpoint;application/vnd.ms-powerpoint;application/vnd.ms-powerpoint;application/vnd.ms-powerpoint;
 Name[en_US]=WPS Presentation
 Name=WPS Presentation
 Name[zh_CN]=WPS 演示
 Path=
+PrefersNonDefaultGPU=false
 StartupNotify=false
 StartupWMClass=wpp
 Terminal=false

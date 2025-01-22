@@ -7,13 +7,14 @@ Exec=env QT_IM_MODULE=fcitx /usr/bin/wpspdf %F
 GenericName[en_US]=Kingsoft Pdf Reader
 GenericName=Kingsoft Pdf Reader
 GenericName[zh_CN]=WPS PDF
-Icon=wps-office2019-pdfmain
+Icon=wps-office2023-pdfmain
 InitialPreference=3
 MimeType=application/pdf;
 Name[en_US]=WPS PDF
 Name=WPS PDF
 Name[zh_CN]=WPS PDF
 Path=
+PrefersNonDefaultGPU=false
 StartupNotify=false
 StartupWMClass=wpspdf
 Terminal=false

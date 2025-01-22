@@ -7,13 +7,14 @@ Exec=env QT_IM_MODULE=fcitx /usr/bin/et %F
 GenericName[en_US]=WPS Spreadsheets
 GenericName=WPS Spreadsheets
 GenericName[zh_CN]=WPS 表格
-Icon=wps-office2019-etmain
+Icon=wps-office2023-etmain
 InitialPreference=3
 MimeType=application/wps-office.xltx;application/wps-office.xlt;application/wps-office.xlsx;application/wps-office.xls;application/wps-office.ett;application/wps-office.ets;application/wps-office.eto;application/wps-office.et;application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;application/vnd.ms-excel;application/vnd.ms-excel;application/vnd.ms-excel;
 Name[en_US]=WPS Spreadsheets
 Name=WPS Spreadsheets
 Name[zh_CN]=WPS 表格
 Path=
+PrefersNonDefaultGPU=false
 StartupNotify=false
 StartupWMClass=et
 Terminal=false

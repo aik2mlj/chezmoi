@@ -7,13 +7,14 @@ Exec=env QT_IM_MODULE=fcitx /usr/bin/wps %U
 GenericName[en_US]=WPS Writer
 GenericName=WPS Writer
 GenericName[zh_CN]=WPS 文字
-Icon=wps-office2019-wpsmain
+Icon=wps-office2023-wpsmain
 InitialPreference=3
 MimeType=application/wps-office.wpt;application/wps-office.wpss;application/wps-office.wpso;application/wps-office.wps;application/wps-office.dotx;application/wps-office.dot;application/wps-office.docx;application/wps-office.doc;application/vnd.openxmlformats-officedocument.wordprocessingml.document;application/vnd.ms-word.document.macroEnabled.12;application/rtf;application/msword-template;application/msword;application/msword;application/msword;
 Name[en_US]=WPS Writer
 Name=WPS Writer
 Name[zh_CN]=WPS 文字
 Path=
+PrefersNonDefaultGPU=false
 StartupNotify=false
 StartupWMClass=wps
 Terminal=false

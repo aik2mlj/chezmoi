@@ -2,18 +2,19 @@
 Categories=Office;WordProcessor;Qt;
 Comment[en_US]=Use WPS Writer to office work.
 Comment=Use WPS Writer to office work.
-Comment[zh_CN]=使用 WPS 2019进行办公
+Comment[zh_CN]=使用 WPS Office进行办公
 Exec=env QT_IM_MODULE=fcitx /usr/bin/wps %F
 GenericName[en_US]=WPS
 GenericName=WPS
-GenericName[zh_CN]=WPS 2019
-Icon=wps-office2019-kprometheus
+GenericName[zh_CN]=WPS Office
+Icon=wps-office2023-kprometheus
 InitialPreference=3
 MimeType=
-Name[en_US]=WPS 2019
-Name=WPS 2019
-Name[zh_CN]=WPS 2019
+Name[en_US]=WPS Office
+Name=WPS Office
+Name[zh_CN]=WPS Office
 Path=
+PrefersNonDefaultGPU=false
 StartupNotify=false
 StartupWMClass=wpsoffice
 Terminal=false
