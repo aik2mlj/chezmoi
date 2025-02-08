@@ -23,7 +23,5 @@ zathura_source_config() {
 }
 
 for id in "${ZATHURAID[@]}"; do
-    # source two times cuz there is a recolor-keephue bug
-    zathura_source_config $id
     zathura_source_config $id
 done

@@ -1,6 +1,6 @@
 include kanagawa-light
-set recolor-keephue
-set recolor
+set recolor-keephue true
+set recolor true
 
 set selection-clipboard clipboard
 set selection-notification false
