@@ -29,6 +29,8 @@ end
 
 # set_proxy
 
+set -gx DEEPSEEK_API_KEY (cat ~/.deepseek_api_key)
+
 fzf_configure_bindings --directory=\cf
 bind \co "yazi-cd; commandline -f repaint"
 # bind \co "set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint"
