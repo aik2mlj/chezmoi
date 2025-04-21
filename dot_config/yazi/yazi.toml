@@ -6,22 +6,32 @@ linemode = "size"
 wrap = "yes"
 
 [[plugin.prepend_fetchers]]
-id   = "git"
-name = "*"
-run  = "git"
+id = "no-remote"
+name = "/mnt/remote/**"
+run = "noop"
 
 [[plugin.prepend_fetchers]]
-id   = "git"
+id = "git"
+name = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
 name = "*/"
-run  = "git"
+run = "git"
 
 [plugin]
 prepend_previewers = [
-    { name = "*.csv", run = "rich-preview"}, # for csv files
-    { name = "*.md", run = "rich-preview" }, # for markdown (.md) files
-    { name = "*.rst", run = "rich-preview"}, # for restructured text (.rst) files
-    { name = "*.ipynb", run = "rich-preview"}, # for jupyter notebooks (.ipynb)
+    # { name = "/mnt/remote/**", run = "noop" },
+    { name = "*.csv", run = "rich-preview" },   # for csv files
+    { name = "*.md", run = "rich-preview" },    # for markdown (.md) files
+    { name = "*.rst", run = "rich-preview" },   # for restructured text (.rst) files
+    { name = "*.ipynb", run = "rich-preview" }, # for jupyter notebooks (.ipynb)
     # { name = "*.json", run = "rich-preview"}, # for json (.json) files
     # { name = "*.lang_type", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
     { name = "*.html", run = "html-preview" },
 ]
+
+[[plugin.prepend_preloaders]]
+name = "/mnt/remote/**"
+run = "noop"
