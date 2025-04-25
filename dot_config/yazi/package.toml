@@ -15,8 +15,8 @@ hash = "e0ada736ea676c2bbb3ec705a49526ef"
 
 [[plugin.deps]]
 use = "AnirudhG07/rich-preview"
-rev = "2559e5f"
-hash = "c9a3d0731e7d7340e2c6d6126b1f3aa3"
+rev = "fdcf373"
+hash = "bd1737dd44b202f412122e6a3b378d4c"
 
 [[plugin.deps]]
 use = "raikhan/compress"
