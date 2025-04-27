@@ -27,7 +27,7 @@ prepend_previewers = [
     { name = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=$( [[ $(kreadconfig6 --group General --key ColorScheme) == *[Dd]ark* ]] && echo dark || echo light ) "$1"' },    # for markdown (.md) files
     { name = "*.rst", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },   # for restructured text (.rst) files
     { name = "*.ipynb", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' }, # for jupyter notebooks (.ipynb)
-    { name = "*.html", run = 'piper -- cha -d "$1"' },
+    { name = "*.html", run = 'piper -- (command -v cha >/dev/null 2>&1 && cha -d "$1") || w3m -dump "$1"' },
 ]
 
 [[plugin.prepend_preloaders]]
