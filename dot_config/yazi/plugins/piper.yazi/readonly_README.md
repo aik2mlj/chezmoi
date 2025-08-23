@@ -5,7 +5,7 @@ Pipe any shell command as a previewer.
 ## Installation
 
 ```sh
-ya pack -a yazi-rs/plugins:piper
+ya pkg add yazi-rs/plugins:piper
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ Piper is a general-purpose previewer - you can pass any shell command to `piper`
 It accepts a string parameter, which is the shell command to be executed, for example:
 
 ```toml
-# ~/.config/yazi/yaiz.toml
+# ~/.config/yazi/yazi.toml
 [[plugin.prepend_previewers]]
 name = "*"
 run  = 'piper -- echo "$1"'

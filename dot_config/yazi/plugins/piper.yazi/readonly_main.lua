@@ -1,22 +1,14 @@
---- @since 25.4.8
+--- @since 25.5.31
 
 local M = {}
 
-local function fail(job, s)
-	ya.preview_widgets(job, {
-		ui.Text.parse(s):area(job.area):wrap(ui.Text.WRAP),
-	})
-end
+local function fail(job, s) ya.preview_widget(job, ui.Text.parse(s):area(job.area):wrap(ui.Wrap.YES)) end
 
 function M:peek(job)
 	local child, err = Command("sh")
-		:args({
-			"-c",
-			job.args[1],
-		})
+		:arg({ "-c", job.args[1], "sh", tostring(job.file.url) })
 		:env("w", job.area.w)
 		:env("h", job.area.h)
-		:args({ "sh", tostring(job.file.url) })
 		:stdout(Command.PIPED)
 		:stderr(Command.PIPED)
 		:spawn()
@@ -45,9 +37,9 @@ function M:peek(job)
 	if #errs > 0 then
 		fail(job, table.concat(errs, ""))
 	elseif job.skip > 0 and i < job.skip + limit then
-		ya.mgr_emit("peek", { math.max(0, i - limit), only_if = job.file.url, upper_bound = true })
+		ya.emit("peek", { math.max(0, i - limit), only_if = job.file.url, upper_bound = true })
 	else
-		ya.preview_widgets(job, { M.format(job, outs) })
+		ya.preview_widget(job, M.format(job, outs))
 	end
 end
 
@@ -56,7 +48,7 @@ function M:seek(job) require("code"):seek(job) end
 function M.format(job, lines)
 	local format = job.args.format
 	if format ~= "url" then
-		local s = table.concat(lines, ""):gsub("\t", string.rep(" ", rt.preview.tab_size))
+		local s = table.concat(lines, ""):gsub("\r", ""):gsub("\t", string.rep(" ", rt.preview.tab_size))
 		return ui.Text.parse(s):area(job.area)
 	end
 

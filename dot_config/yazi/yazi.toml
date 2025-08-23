@@ -1,4 +1,4 @@
-[manager]
+[mgr]
 ratio = [1, 2, 3]
 linemode = "size"
 
@@ -28,6 +28,7 @@ prepend_previewers = [
     { name = "*.rst", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },   # for restructured text (.rst) files
     { name = "*.ipynb", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' }, # for jupyter notebooks (.ipynb)
     { name = "*.html", run = 'piper -- (command -v cha >/dev/null 2>&1 && cha -d "$1") || w3m -dump "$1"' },
+    { name = "*.docx", run = 'piper -- doxx "$1" --export text' },
 ]
 
 [[plugin.prepend_preloaders]]
