@@ -5,6 +5,16 @@ linemode = "size"
 [preview]
 wrap = "yes"
 
+[open]
+prepend_rules = [
+    { mime = "audio/*", use = "play_audio" }
+]
+
+[opener]
+play_audio = [
+	{ run = 'mpv "$@"', block = true },
+]
+
 [[plugin.prepend_fetchers]]
 id = "no-remote"
 name = "/mnt/remote/**"
