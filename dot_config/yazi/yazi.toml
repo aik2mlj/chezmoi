@@ -39,8 +39,21 @@ prepend_previewers = [
     { name = "*.ipynb", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' }, # for jupyter notebooks (.ipynb)
     { name = "*.html", run = 'piper -- (command -v cha >/dev/null 2>&1 && cha -d "$1") || w3m -dump "$1"' },
     { name = "*.docx", run = 'piper -- doxx "$1" --export text' },
-]
 
-[[plugin.prepend_preloaders]]
-name = "/mnt/remote/**"
-run = "noop"
+    # mediainfo
+    # Replace magick, image, video with mediainfo
+    { mime = "{audio,video,image}/*", run = "mediainfo"},
+    { mime = "application/subrip", run = "mediainfo" },
+    # Adobe Illustrator, Adobe Photoshop is image/adobe.photoshop, already handled above
+    { mime = "application/postscript", run = "mediainfo" },
+]
+prepend_preloaders = [
+    { name = "/mnt/remote/**", run = "noop"},
+
+    # mediainfo
+    # Replace magick, image, video with mediainfo
+    { mime = "{audio,video,image}/*", run = "mediainfo" },
+    { mime = "application/subrip", run = "mediainfo" },
+    # Adobe Illustrator, Adobe Photoshop is image/adobe.photoshop, already handled above
+    { mime = "application/postscript", run = "mediainfo" },
+]

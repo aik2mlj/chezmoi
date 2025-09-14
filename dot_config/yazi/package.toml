@@ -23,5 +23,10 @@ use = "yazi-rs/plugins:piper"
 rev = "d7588f6"
 hash = "2143a53182dbbe935a1abd1623424aa5"
 
+[[plugin.deps]]
+use = "boydaihungst/mediainfo"
+rev = "2093ab7"
+hash = "16a10359fc2a3cd8cc8bcfbe00f744d3"
+
 [flavor]
 deps = []
