@@ -1,4 +1,8 @@
 #!/bin/sh
 
+# install packages
+# see https://github.com/hoyon/mpv-mpris and https://github.com/po5/thumbfast
 paru -S --needed mpv mpv-mpris mpv-osc-thumbfast-git
+
+# install a nice UI for mpv
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/tomasklaen/uosc/HEAD/installers/unix.sh)"
