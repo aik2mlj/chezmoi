@@ -30,13 +30,26 @@ chezmoi apply
 
 See the [chezmoi documentation](https://www.chezmoi.io/) for more information on how to use it.
 
-## Fonts
+## Fonts and Input Methods
 
-See my font configuration in [`~/.config/fontconfig/fonts.conf`](dot_config/fontconfig/fonts.conf). Then I like to set font to `Bookerly` in KDE Plasma system settings. Several fonts to install:
+See my font configuration in [`~/.config/fontconfig/fonts.conf`](dot_config/fontconfig/fonts.conf). I also like to set font to `Bookerly` in KDE Plasma system settings. Several fonts to install:
 
 ```bash
 paru -S --needed ttf-lxgw-bright ttf-lxgw-wenkai noto-fonts-cjk noto-fonts ttf-delugia-code ttf-bookerly
 ```
+
+I use [fcitx5](https://fcitx-im.org/wiki/Fcitx5) + [rime](https://rime.im/) as my input method framework. I pick [rime-ice](https://github.com/iDvel/rime-ice) for Chinese input configuration, with [flypy](https://flypy.cc/) as my double pinyin scheme. Check the configuration in [`~/.local/share/fcitx5/rime`](dot_local/share/private_fcitx5/private_rime).
+
+```bash
+# fcitx5 + rime
+paru -S --needed fcitx5 fcitx5-configtool fcitx5-gtk fcitx5-qt fcitx5-rime
+# rime-ice: this includes all supported input schemes
+paru -S --needed rime-ice-git
+# or better, install just a specific input scheme like flypy
+# paru -S --needed rime-ice-double-pinyin-flypy-git
+```
+
+Necessary environment variables have been set in [`~/.config/environment.d/fcitx5.conf`](dot_config/environment.d/fcitx5.conf). Additional steps may include [this integration](https://wiki.archlinux.org/title/Fcitx5#KDE_Plasma).
 
 ## Services to Install
 
@@ -60,8 +73,10 @@ Additional services and configurations that I use, which you may want to install
 
 ## Some Goodies to Notice
 
-[`~/Scripts/spectacle-ocr.sh`](Scripts/executable_spectacle-ocr.sh): OCR screenshot utility using `spectacle` and `tesseract`. It allows you to select a region of the screen, take a screenshot, and extract (English + Simplified Chinese) text from it. Mapped to `Meta+Print` in [KDE Plasma shortcuts](dot_config/private_kglobalshortcutsrc). Install the necessary packages with:
+First, take a look at my [remote server configurations](https://github.com/aik2mlj/remote-server-configs) where I introduce many terminal utilities and configurations. They are also used here.
 
-```bash
-paru -S --needed tesseract tesseract-data-eng tesseract-data-chi_sim spectacle
-```
+- [`~/Scripts/spectacle-ocr.sh`](Scripts/executable_spectacle-ocr.sh): OCR screenshot utility using `spectacle` and `tesseract`. It allows you to select a region of the screen, take a screenshot, and extract (English + Simplified Chinese) text from it. Mapped to `Meta+Print` in [KDE Plasma shortcuts](dot_config/private_kglobalshortcutsrc). Install the necessary packages with:
+
+  ```bash
+  paru -S --needed tesseract tesseract-data-eng tesseract-data-chi_sim spectacle
+  ```
