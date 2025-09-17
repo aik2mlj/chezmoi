@@ -1,6 +1,6 @@
 [Desktop Entry]
-Exec=/home/aik2/Scripts/spectacle-ocr.sh
-Name=/home/aik2/Scripts/spectacle-ocr.sh
+Exec=/bin/bash -c "$HOME/Scripts/spectacle-ocr.sh"
+Name=spectacle-ocr
 NoDisplay=true
 StartupNotify=false
 Type=Application
