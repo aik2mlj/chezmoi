@@ -61,9 +61,12 @@ My preferred **desktop** softwares and utils:
 
 - [mpv](https://wiki.archlinux.org/title/Mpv): A minimal, versatile and highly customizable media player. My configuration includes several utils (media control & thumbnail generation) and a nice UI skin. Check and run [`~/.config/mpv/packages.install`](dot_config/mpv/executable_packages.install) to install the necessary packages.
 
-- [Zathura](https://wiki.archlinux.org/title/Zathura): PDF viewer with vim-like keybindings. It can even be wrapped to view Office documents like [this](https://wiki.archlinux.org/title/Zathura#Read_Microsoft_Office/LibreOffice_documents_within_zathura).
+- [Zathura](https://wiki.archlinux.org/title/Zathura): A lightweight and customizable PDF viewer with vim-like keybindings. Can even be wrapped to view Office documents like [this](https://wiki.archlinux.org/title/Zathura#Read_Microsoft_Office/LibreOffice_documents_within_zathura).
+  - Equally recommended are [Okular](https://okular.kde.org) (KDE Plasma default, works great) and [Sioyek](https://sioyek.info/) (handy smart jump function for viewing research papers).
 
 - [WPS Office](https://wiki.archlinux.org/title/WPS_Office): A solid alternative to Microsoft Office. I find it the most compatible and responsible on Linux.
+
+- [Foliate](https://johnfactotum.github.io/foliate/): A great eBook reader with a clean interface.
 
 - [Syncthing](https://wiki.archlinux.org/title/Syncthing): The best open-source file synchronization tool. It can be used to sync files between your devices, including your phone. There's no subscription or centralized providers, as the data transfer is encrypted in a volunteered p2p network. There is a nice [tray integration](https://wiki.archlinux.org/title/Syncthing#Syncthing_Tray).
 
@@ -71,7 +74,20 @@ My preferred **desktop** softwares and utils:
 
 - [KDE Connect](https://wiki.archlinux.org/title/KDE_Connect): Included in KDE Plasma by default but still worth mentioning. A great tool to integrate your phone with your desktop. It allows you to share clipboards, files, notifications, and control your desktop from your phone.
 
+- [Kdenlive](https://kdenlive.org/): A powerful and user-friendly video editor.
+
+- [Krita](https://krita.org/): A professional open-source painting program, great for digital art and photo editing.
+
 - [Yakuake](https://wiki.archlinux.org/title/Yakuake): A drop-down terminal emulator for KDE Plasma.
+
+- [Libinput-gestures](https://wiki.archlinux.org/title/Libinput#libinput-gestures): Actions gestures on your touchpad using libinput. Bundled with Garuda Linux by default. I map 3-finger swipe up/down to `ctrl-t/w` for quick tab new/close in browsers with [ydotool](https://github.com/ReimuNotMoe/ydotool) (the default `xdotool` mapping is not compatible with Wayland). See [`~/.config/libinput-gestures.conf`](./dot_config/libinput-gestures.conf). Enable it with:
+
+  ```bash
+  paru -S --needed libinput-gestures ydotool
+  systemctl --user enable --now ydotool.service
+  ```
+
+  - Alternative: [Fusuma](https://wiki.archlinux.org/title/Libinput#fusuma) is also configured. Uncomment the line in [`~/.profile`](dot_profile) to enable it.
 
 - [Spectacle OCR](Scripts/executable_spectacle-ocr.sh): OCR screenshot utility using `spectacle` and `tesseract`. It allows you to select a region of the screen, take a screenshot, and extract (English + Simplified Chinese) text from it. Mapped to `Meta+Print` in [KDE Plasma shortcuts](dot_config/private_kglobalshortcutsrc). Install the necessary packages with:
 
