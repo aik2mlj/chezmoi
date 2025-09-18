@@ -1,1 +1,2 @@
-fusuma &
+# if prefer fusuma over libinput-gestures, uncomment the following line
+# fusuma &
