@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/bin/bash -c "$HOME/Scripts/xdg-desktop-portal-restart.sh"
+Exec=sh -c "\$HOME/Scripts/xdg-desktop-portal-restart.sh"
 Icon=application-x-shellscript
 Name=xdg-desktop-portal-restart.sh
 Type=Application
