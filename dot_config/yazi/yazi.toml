@@ -7,12 +7,17 @@ wrap = "yes"
 
 [open]
 prepend_rules = [
-    { mime = "audio/*", use = "play_audio" }
+    { mime = "audio/*", use = "play_audio" },
+    { name = "*.docx", use = "doxx" },
 ]
 
 [opener]
 play_audio = [
 	{ run = 'mpv "$@"', block = true },
+]
+doxx = [
+    # export doxx to text, then open nvim to edit it
+    { run = 'doxx "$@" --export text | nvim -c "set filetype=markdown" -c "set wrap" -', block = true },
 ]
 
 [[plugin.prepend_fetchers]]
@@ -38,7 +43,7 @@ prepend_previewers = [
     { name = "*.rst", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },   # for restructured text (.rst) files
     { name = "*.ipynb", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' }, # for jupyter notebooks (.ipynb)
     { name = "*.html", run = 'piper -- (command -v cha >/dev/null 2>&1 && cha -d "$1") || w3m -dump "$1"' },
-    { name = "*.docx", run = 'piper -- doxx "$1" --export text' },
+    { name = "*.docx", run = 'piper -- doxx "$1" --export ansi -w=$w --color-depth 4' },
 
     # mediainfo
     # Replace magick, image, video with mediainfo
