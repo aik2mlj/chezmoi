@@ -8,7 +8,8 @@ wrap = "yes"
 [open]
 prepend_rules = [
     { mime = "audio/*", use = "play_audio" },
-    { name = "*.docx", use = "doxx" },
+    { name = "*.docx", use = ["doxx", "pandoc"] },
+    { name = "*.doc", use = ["antiword"] },
 ]
 
 [opener]
@@ -16,8 +17,14 @@ play_audio = [
 	{ run = 'mpv "$@"', block = true },
 ]
 doxx = [
-    # export doxx to text, then open nvim to edit it
+    # export docx to text, then open nvim to edit it
     { run = 'doxx "$@" --export text | nvim -c "set filetype=markdown" -c "set wrap" -', block = true },
+]
+pandoc = [
+    { run = 'pandoc "$@" -s -t markdown --wrap=none | nvim -c "set filetype=markdown" -c "set wrap" -', block = true },
+]
+antiword = [
+    { run = 'antiword "$@" | nvim -c "set filetype=plain" -c "set wrap" -', block = true },
 ]
 
 [[plugin.prepend_fetchers]]
@@ -44,6 +51,7 @@ prepend_previewers = [
     { name = "*.ipynb", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' }, # for jupyter notebooks (.ipynb)
     { name = "*.html", run = 'piper -- (command -v cha >/dev/null 2>&1 && cha -d "$1") || w3m -dump "$1"' },
     { name = "*.docx", run = 'piper -- doxx "$1" --export ansi -w=$w --color-depth 4' },
+    { name = "*.doc", run = 'piper -- antiword "$1"' },
 
     # mediainfo
     # Replace magick, image, video with mediainfo
