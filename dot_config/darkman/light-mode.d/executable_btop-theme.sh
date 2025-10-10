@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sed -i 's/color_theme.*/color_theme = "\/usr\/share\/btop\/themes\/whiteout.theme"/' $HOME/.config/btop/btop.conf
+sed -i 's/color_theme.*/color_theme = "\/usr\/share\/btop\/themes\/kanagawa-lotus.theme"/' $HOME/.config/btop/btop.conf
