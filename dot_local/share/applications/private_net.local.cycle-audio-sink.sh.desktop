@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=/bin/bash -c "$HOME/Scripts/cycle-audio-sink.sh"
+Name=cycle-audio-sink
+NoDisplay=true
+StartupNotify=false
+Type=Application
+X-KDE-GlobalAccel-CommandShortcut=true
