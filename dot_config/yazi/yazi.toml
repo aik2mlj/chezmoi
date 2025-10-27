@@ -8,8 +8,8 @@ wrap = "yes"
 [open]
 prepend_rules = [
     { mime = "audio/*", use = "play_audio" },
-    { name = "*.docx", use = ["doxx", "pandoc"] },
-    { name = "*.doc", use = ["antiword"] },
+    { url = "*.docx", use = ["doxx", "pandoc"] },
+    { url = "*.doc", use = ["antiword"] },
 ]
 
 [opener]
@@ -29,29 +29,29 @@ antiword = [
 
 [[plugin.prepend_fetchers]]
 id = "no-remote"
-name = "/mnt/remote/**"
+url = "/mnt/remote/**"
 run = "noop"
 
 [[plugin.prepend_fetchers]]
 id = "git"
-name = "*"
+url = "*"
 run = "git"
 
 [[plugin.prepend_fetchers]]
 id = "git"
-name = "*/"
+url = "*/"
 run = "git"
 
 [plugin]
 prepend_previewers = [
-    # { name = "/mnt/remote/**", run = "noop" },
-    { name = "*.csv", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },   # for csv files
-    { name = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=$( [[ $(kreadconfig6 --group General --key ColorScheme) == *[Dd]ark* ]] && echo dark || echo light ) "$1"' },    # for markdown (.md) files
-    { name = "*.rst", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },   # for restructured text (.rst) files
-    { name = "*.ipynb", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' }, # for jupyter notebooks (.ipynb)
-    { name = "*.html", run = 'piper -- (command -v cha >/dev/null 2>&1 && cha -d "$1") || w3m -dump "$1"' },
-    { name = "*.docx", run = 'piper -- doxx "$1" --export ansi -w=$w --color-depth 4' },
-    { name = "*.doc", run = 'piper -- antiword "$1"' },
+    # { url = "/mnt/remote/**", run = "noop" },
+    { url = "*.csv", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },   # for csv files
+    { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=$( [[ $(kreadconfig6 --group General --key ColorScheme) == *[Dd]ark* ]] && echo dark || echo light ) "$1"' },    # for markdown (.md) files
+    { url = "*.rst", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },   # for restructured text (.rst) files
+    { url = "*.ipynb", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' }, # for jupyter notebooks (.ipynb)
+    { url = "*.html", run = 'piper -- (command -v cha >/dev/null 2>&1 && cha -d "$1") || w3m -dump "$1"' },
+    { url = "*.docx", run = 'piper -- doxx "$1" --export ansi -w=$w --color-depth 4' },
+    { url = "*.doc", run = 'piper -- antiword "$1"' },
 
     # mediainfo
     # Replace magick, image, video with mediainfo
@@ -61,7 +61,7 @@ prepend_previewers = [
     { mime = "application/postscript", run = "mediainfo" },
 ]
 prepend_preloaders = [
-    { name = "/mnt/remote/**", run = "noop"},
+    { url = "/mnt/remote/**", run = "noop"},
 
     # mediainfo
     # Replace magick, image, video with mediainfo

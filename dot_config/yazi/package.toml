@@ -1,17 +1,17 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "d7588f6"
+rev = "8f1d971"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "d7588f6"
+rev = "8f1d971"
 hash = "56fdabc96fc1f4d53c96eb884b02a5be"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "d7588f6"
-hash = "63b6c222bf2103b3023389dde5e2ecfe"
+rev = "8f1d971"
+hash = "3cce60031b27cbce80b50f68ca319c0a"
 
 [[plugin.deps]]
 use = "raikhan/compress"
@@ -20,8 +20,8 @@ hash = "64eb7a1b835cf57bbda62b4bf4c80fe0"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:piper"
-rev = "d7588f6"
-hash = "2143a53182dbbe935a1abd1623424aa5"
+rev = "8f1d971"
+hash = "64713dcd74daf9ec644883a5895e5d1"
 
 [[plugin.deps]]
 use = "boydaihungst/mediainfo"
