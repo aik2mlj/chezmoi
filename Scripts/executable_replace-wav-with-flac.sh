@@ -3,8 +3,8 @@
 # Find and loop through all .wav files using fd
 while IFS= read -r wavfile; do
 
-    # Create output file name by replacing .wav with .flac
-    flacfile="${wavfile%.wav}.flac"
+    # Create output file name by replacing .wav/.WAV with .flac
+    flacfile="${wavfile:0:-4}.flac"
 
     echo "Converting: $wavfile -> $flacfile"
 
