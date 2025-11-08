@@ -73,6 +73,10 @@ if status is-interactive
     if type -q zoxide
         zoxide init fish | source
     end
+    # initialize atuin
+    if type -q atuin
+        atuin init fish | source
+    end
 end
 
 # >>> conda initialize >>>
