@@ -1,21 +1,13 @@
 [Desktop Entry]
-Categories=Network;Application;
-Comment[en_US]=Zoom Video Conference
+Name=Zoom Workplace
 Comment=Zoom Video Conference
-Encoding=UTF-8
-Exec=env QT_IM_MODULE=fcitx XDG_CURRENT_DESKTOP=gnome /usr/bin/zoom %U
-GenericName[en_US]=
-GenericName=
+Exec=env QT_IM_MODULE=fcitx /usr/bin/zoom %U
 Icon=Zoom
-MimeType=application/x-zoom;
-Name[en_US]=Zoom
-Name=Zoom
-Path=
-StartupNotify=true
-StartupWMClass=zoom
 Terminal=false
-TerminalOptions=
 Type=Application
-X-KDE-Protocols=zoommtg;zoomus;tel;callto;zoomphonecall;
-X-KDE-SubstituteUID=false
-X-KDE-Username=
+Encoding=UTF-8
+Categories=Network;Application;
+StartupWMClass=zoom
+MimeType=x-scheme-handler/zoommtg;x-scheme-handler/zoomus;x-scheme-handler/tel;x-scheme-handler/callto;x-scheme-handler/zoomphonecall;x-scheme-handler/zoomphonesms;x-scheme-handler/zoomcontactcentercall;application/x-zoom
+X-KDE-Protocols=zoommtg;zoomus;tel;callto;zoomphonecall;zoomphonesms;zoomcontactcentercall;
+Name[en_US]=Zoom Workplace
