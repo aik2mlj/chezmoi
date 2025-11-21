@@ -54,6 +54,6 @@ fi
 echo "Switched to: $sink_description"
 
 # Optional: Show desktop notification (requires notify-send)
-if command -v notify-send &>/dev/null; then
-    notify-send "Audio Output" "Switched to: $sink_description" -t 2000
-fi
+# if command -v notify-send &>/dev/null; then
+#     notify-send "Audio Output" "Switched to: $sink_description" -t 2000
+# fi
