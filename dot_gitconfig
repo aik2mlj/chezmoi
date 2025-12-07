@@ -1,6 +1,14 @@
 [user]
 	name = Lejun Min
 	email = aik2mlj@gmail.com
+
+[merge]
+    conflictstyle = diff3
+
+[merge "mergiraf"]
+    name = mergiraf
+    driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+
 ; [https]
 ; 	proxy = http://127.0.0.1:7890
 ; [http]
@@ -23,8 +31,6 @@
 ;     navigate = true    # use n and N to move between diff sections
 ;     light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
 ;
-; [merge]
-;     conflictstyle = diff3
-;
 ; [diff]
 ;     colorMoved = default
+
