@@ -133,6 +133,5 @@ abbr ra ranger-cd
 abbr cal calcurse
 abbr fs "fluidsynth --quiet /usr/share/sounds/sf2/GeneralUser\ GS\ v1.471.sf2"
 
-# color scheme git@github.com:aik2mlj/fish-color-scheme-switcher.git
-# scheme set tokyonight
-# kanagawa
+# color scheme (after fish 4.3)
+fish_config theme choose tomorrow
