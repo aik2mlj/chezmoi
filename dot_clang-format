@@ -4,10 +4,10 @@ IndentWidth: 4
 TabWidth: 4
 MaxEmptyLinesToKeep: 2
 BreakBeforeBraces: Attach
-AllowShortBlocksOnASingleLine: true
-AllowShortIfStatementsOnASingleLine: true
-AllowShortLoopsOnASingleLine: true
-AllowShortFunctionsOnASingleLine: true
+AllowShortBlocksOnASingleLine: Always
+# AllowShortIfStatementsOnASingleLine: WithoutElse
+# AllowShortLoopsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
 SpaceBeforeParens: ControlStatements
 ColumnLimit: 100
 
