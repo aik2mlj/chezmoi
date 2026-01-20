@@ -1,0 +1,33 @@
+#!/bin/bash
+# Wrapper to format a single ChucK file using clang-format
+
+# Stop script on first error
+set -e
+
+# Check for filename argument
+if [ -z "$1" ]; then
+    echo "Usage: $0 <file.ck>"
+    exit 1
+fi
+
+FILE="$1"
+
+# 1. Run clang-format in-place (-i)
+clang-format -i "$FILE"
+
+# 2. Post-processing Fix:
+
+# Stitch '=>' back together
+# clang-format treats '=>' as assignment (=) followed by
+# a greater-than sign (>), resulting in "= >". We use sed to revert this specific pattern.
+sed -i 's/= >/=>/g' "$FILE"
+
+# Stitch '@=>' back together
+sed -i 's/@ =>/@=>/g' "$FILE"
+
+# Fixes "1 ::second" -> "1::second"
+# Matches any digit followed by one or more spaces and '::'
+sed -i -E 's/([0-9]) +::/\1::/g' "$FILE"
+
+# add padding spaces inside <<< >>>
+sed -i -E 's/<<<[[:space:]]*/<<< /g; s/[[:space:]]*>>>/ >>>/g' "$FILE"
