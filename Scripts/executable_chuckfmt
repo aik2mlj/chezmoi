@@ -1,33 +1,126 @@
-#!/bin/bash
-# Wrapper to format a single ChucK file using clang-format
+#!/usr/bin/env bash
+set -euo pipefail
 
-# Stop script on first error
-set -e
+# ---- Configuration: add your extra sed commands here ----
+SED_ARGS=(
+    -E
+    -e 's/=[[:space:]]*>/=>/g; s/@[[:space:]]*=>/@=>/g' # "= >" -> "=>" and "@ =>" -> "@=>"
+    -e 's/([0-9]+(\.[0-9]*)?)[[:space:]]+::/\1::/g'     # "1 ::second" -> "1::second"
+    -e 's/<<<[[:space:]]*/<<< /g'                       # add one padding after <<<
+    -e 's/[[:space:]]*>>>/ >>>/g'                       # add one padding before >>>
+)
 
-# Check for filename argument
-if [ -z "$1" ]; then
-    echo "Usage: $0 <file.ck>"
-    exit 1
+SED_BIN="${SED_BIN:-sed}"
+CLANG_FORMAT_BIN="${CLANG_FORMAT_BIN:-clang-format}"
+
+apply_sed() {
+    if ((${#SED_ARGS[@]} == 0)); then
+        cat
+    else
+        "$SED_BIN" "${SED_ARGS[@]}"
+    fi
+}
+
+# Detect -i
+has_inplace=0
+for arg in "$@"; do
+    if [[ "$arg" == "-i" ]]; then
+        has_inplace=1
+        break
+    fi
+done
+
+# Find '--' delimiter position (if any)
+delim_pos=0
+idx=0
+for arg in "$@"; do
+    idx=$((idx + 1))
+    if [[ "$arg" == "--" ]]; then
+        delim_pos="$idx"
+        break
+    fi
+done
+
+if [[ "$has_inplace" -eq 0 ]]; then
+    # Non-inplace: clang-format output -> sed -> stdout.
+    "$CLANG_FORMAT_BIN" "$@" | apply_sed
+    exit 0
 fi
 
-FILE="$1"
+# In-place mode: run clang-format in-place first (unchanged args).
+"$CLANG_FORMAT_BIN" "$@"
 
-# 1. Run clang-format in-place (-i)
-clang-format -i "$FILE"
+# No sed rules => nothing else to do
+if ((${#SED_ARGS[@]} == 0)); then
+    exit 0
+fi
 
-# 2. Post-processing Fix:
+# Determine files to postprocess with sed -i
+files=()
 
-# Stitch '=>' back together
-# clang-format treats '=>' as assignment (=) followed by
-# a greater-than sign (>), resulting in "= >". We use sed to revert this specific pattern.
-sed -i 's/= >/=>/g' "$FILE"
+if [[ "$delim_pos" -ne 0 ]]; then
+    # Strict mode: only args after '--' are files
+    # Example: cfmt -i --style LLVM -- a.cpp b.cpp
+    n=$#
+    for ((i = delim_pos + 1; i <= n; i++)); do
+        f="${!i}"
+        # Ignore "-" (stdin marker in some tools)
+        [[ "$f" == "-" ]] && continue
+        # Ignore accidental extra delimiter
+        [[ "$f" == "--" ]] && continue
+        files+=("$f")
+    done
+else
+    # Heuristic mode (no --): collect non-option tokens as files.
+    skip_next=0
+    n=$#
+    for ((i = 1; i <= n; i++)); do
+        arg="${!i}"
 
-# Stitch '@=>' back together
-sed -i 's/@ =>/@=>/g' "$FILE"
+        if [[ "$skip_next" -eq 1 ]]; then
+            skip_next=0
+            continue
+        fi
 
-# Fixes "1 ::second" -> "1::second"
-# Matches any digit followed by one or more spaces and '::'
-sed -i -E 's/([0-9]) +::/\1::/g' "$FILE"
+        # Options that may take a separate value token
+        case "$arg" in
+        -Wno-error | --Wno-error | \
+            -assume-filename | --assume-filename | \
+            -cursor | --cursor | \
+            -fallback-style | --fallback-style | \
+            -ferror-limit | --ferror-limit | \
+            -files | --files | \
+            -length | --length | \
+            -lines | --lines | \
+            -offset | --offset | \
+            -qualifier-alignment | --qualifier-alignment | \
+            -style | --style)
+            skip_next=1
+            continue
+            ;;
+        esac
 
-# add padding spaces inside <<< >>>
-sed -i -E 's/<<<[[:space:]]*/<<< /g; s/[[:space:]]*>>>/ >>>/g' "$FILE"
+        # Ignore response files like @args.txt (clang-format expands them itself)
+        [[ "$arg" == @* ]] && continue
+        # Ignore "-"
+        [[ "$arg" == "-" ]] && continue
+        # Ignore options starting with "-" (includes inline value forms like --style=LLVM)
+        [[ "$arg" == -* ]] && continue
+
+        files+=("$arg")
+    done
+fi
+
+# If no files identified, nothing to postprocess
+if ((${#files[@]} == 0)); then
+    exit 0
+fi
+
+# Apply sed in-place (BSD sed vs GNU sed compatibility)
+for f in "${files[@]}"; do
+    if "$SED_BIN" -i '' "${SED_ARGS[@]}" "$f" 2>/dev/null; then
+        :
+    else
+        "$SED_BIN" -i "${SED_ARGS[@]}" "$f"
+    fi
+done
