@@ -10,6 +10,8 @@ prepend_rules = [
     { mime = "audio/*", use = "play_audio" },
     { url = "*.docx", use = ["doxx", "pandoc"] },
     { url = "*.doc", use = ["antiword"] },
+    { url = "*.html", use = ["edit", "open"] },
+    { url = "*.ipynb", use = ["open"] },
 ]
 
 [opener]
