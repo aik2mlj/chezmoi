@@ -13,7 +13,7 @@
 default.fg=#DCD7BA
 default.bg=#1F1F28
 
-error.fg=#E82424
+error.fg=#E46876
 warning.fg=#FF9E3B
 success.fg=#98BB6C
 
@@ -27,11 +27,12 @@ border.fg=#2A2A37
 border.bold=true
 
 msglist_unread.bold=true
+msglist_unread.fg=#7FB4CA
 msglist_flagged.fg=#E6C384
 msglist_flagged.bold=true
 msglist_result.fg=#7E9CD8
 msglist_result.bold=true
-msglist_deleted.fg=#E82424
+msglist_deleted.fg=#E46876
 msglist_*.selected.bold=true
 msglist_*.selected.bg=#363646
 
@@ -42,7 +43,7 @@ dirlist_*.selected.bg=#363646
 
 statusline_default.fg=#C8C093
 statusline_default.bg=#363646
-statusline_error.fg=#E82424
+statusline_error.fg=#E46876
 statusline_error.bold=true
 statusline_success.fg=#98BB6C
 statusline_success.bold=true
