@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# aerc filter to view HTML emails with chawan.
+#
+# Supports inline images via Sixel or Kitty graphics protocol.
+# Networking access is disabled unless the script is named 'html-cha-unsafe'.
+
+set -- cha \
+    -T text/html \
+    -I UTF-8 \
+    -O UTF-8 \
+    -o buffer.images=true \
+    -o display.image-mode=kitty \
+    "$@"
+
+if [ -t 1 ]; then
+    # stdout is connected to a terminal
+    set -- "$@"
+else
+    # stdout is connected to a pager, dump mode
+    set -- "$@" -d
+fi
+
+exec "$@"
