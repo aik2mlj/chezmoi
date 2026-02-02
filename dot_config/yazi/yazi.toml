@@ -48,7 +48,9 @@ run = "git"
 prepend_previewers = [
     # { url = "/mnt/remote/**", run = "noop" },
     { url = "*.csv", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },   # for csv files
-    { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=$( [[ $(kreadconfig6 --group General --key ColorScheme) == *[Dd]ark* ]] && echo dark || echo light ) "$1"' },    # for markdown (.md) files
+    # { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=$( [[ $(kreadconfig6 --group General --key ColorScheme) == *[Dd]ark* ]] && echo dark || echo light ) "$1"' },
+    # mcat is faster and prettier than glow. need to strip the stdin header and OSC 8 hyperlink escape sequences
+    { url = "*.md", run = 'piper -- mcat -P -c -f --opts "scale=0.49" --theme=$( [[ $(kreadconfig6 --group General --key ColorScheme) == *[Dd]ark* ]] && echo kanagawa || echo makurai_light ) "$1" | tail -n +9 | perl -pe "s/\e\]8;[^;]*;[^\e]*\e\\\\//g"' },
     { url = "*.rst", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },   # for restructured text (.rst) files
     { url = "*.ipynb", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' }, # for jupyter notebooks (.ipynb)
     { url = "*.html", run = 'piper -- (command -v cha >/dev/null 2>&1 && cha -d "$1") || w3m -dump "$1"' },

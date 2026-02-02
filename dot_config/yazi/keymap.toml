@@ -46,3 +46,8 @@ desc = "Cancel input"
 on = "!"
 run = 'shell "$SHELL" --block'
 desc = "Open shell here"
+
+[[mgr.prepend_keymap]]
+on = "<F9>"
+run = "plugin mediainfo -- toggle-metadata"
+desc = "Toggle media preview metadata"
