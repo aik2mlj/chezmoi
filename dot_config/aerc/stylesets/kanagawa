@@ -35,6 +35,8 @@ msglist_result.bold=true
 msglist_deleted.fg=#E46876
 msglist_*.selected.bold=true
 msglist_*.selected.bg=#363646
+msglist_marked.bg = #223249
+msglist_pill.bg = #45455A
 
 dirlist_unread.fg=#7FB4CA
 dirlist_recent.fg=#98BB6C
