@@ -24,6 +24,7 @@ tab.selected.bg=#363646
 tab.selected.bold=true
 
 border.fg=#2A2A37
+border.bg=#1F1F28
 border.bold=true
 
 msglist_unread.bold=true
@@ -35,8 +36,9 @@ msglist_result.bold=true
 msglist_deleted.fg=#E46876
 msglist_*.selected.bold=true
 msglist_*.selected.bg=#363646
-msglist_marked.bg = #223249
-msglist_pill.bg = #45455A
+msglist_marked.bg=#223249
+msglist_pill.bg=#45455A
+msglist_gutter.bg=#1F1F28
 
 dirlist_unread.fg=#7FB4CA
 dirlist_recent.fg=#98BB6C
@@ -51,6 +53,10 @@ statusline_success.fg=#98BB6C
 statusline_success.bold=true
 
 completion_default.selected.bg=#363646
+completion_description.bg=#1F1F28
+completion_description.fg=#C8C093
+completion_gutter.bg=#1F1F28
+completion_pill.bg=#45455A
 
 part_filename.selected.fg=#DCD7BA
 part_filename.selected.bg=#2A2A37
