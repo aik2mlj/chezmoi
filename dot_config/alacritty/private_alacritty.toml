@@ -47,16 +47,16 @@ TERM = "xterm-256color"
 size = 12
 
 [font.bold]
-family = "Delugia Book"
+family = "CaskaydiaCove Nerd Font"
 
 [font.bold_italic]
-family = "Delugia Book"
+family = "CaskaydiaCove Nerd Font"
 
 [font.italic]
-family = "Delugia Book"
+family = "CaskaydiaCove Nerd Font"
 
 [font.normal]
-family = "Delugia Book"
+family = "CaskaydiaCove Nerd Font"
 
 [[keyboard.bindings]]
 action = "Paste"

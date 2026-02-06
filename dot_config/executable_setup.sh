@@ -29,9 +29,8 @@ chsh -s /usr/bin/fish
 paru -S fcitx5 fcitx-chinese-addons fcitx5-qt kcm-fcitx5
 
 # some beautiful fonts
-paru -S ttf-delugia-code ttf-lxgw-wenkai
+paru -S ttf-cascadia-code-nerd ttf-lxgw-wenkai
 
 # copy .config
 cp -r config/* ~/.config
 rm -rf config/
-

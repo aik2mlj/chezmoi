@@ -2,7 +2,7 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: LXGW Wenkai, Delugia Book, JetBrainsMono Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: LXGW Wenkai, CaskaydiaCove Nerd Font, JetBrainsMono Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     color : @text;
 }

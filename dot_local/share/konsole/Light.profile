@@ -1,6 +1,6 @@
 [Appearance]
 ColorScheme=SolarizedLight
-Font=Delugia Book,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+Font=CaskaydiaCove Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 UseFontLineChararacters=true
 
 [Cursor Options]

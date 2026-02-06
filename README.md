@@ -35,7 +35,7 @@ See the [chezmoi documentation](https://www.chezmoi.io/) for more information on
 See my font configuration in [`~/.config/fontconfig/fonts.conf`](dot_config/fontconfig/fonts.conf). I also like to set font to `Bookerly` in KDE Plasma system settings. Several fonts to install:
 
 ```bash
-paru -S --needed ttf-lxgw-bright ttf-lxgw-wenkai noto-fonts-cjk noto-fonts ttf-delugia-code amazon-fonts
+paru -S --needed ttf-lxgw-bright ttf-lxgw-wenkai noto-fonts-cjk noto-fonts ttf-cascadia-code-nerd amazon-fonts
 ```
 
 I use [fcitx5](https://wiki.archlinux.org/title/Fcitx5) + [rime](https://wiki.archlinux.org/title/Rime) as my input method framework. I pick [rime-ice](https://github.com/iDvel/rime-ice) for Chinese input configuration, with [flypy](https://flypy.cc/) as my double pinyin scheme. Check the configuration in [`~/.local/share/fcitx5/rime`](dot_local/share/private_fcitx5/private_rime).
