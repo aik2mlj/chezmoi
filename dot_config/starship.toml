@@ -13,6 +13,7 @@ style_user = "bold red"
 disabled = false
 format = "on [$hostname]($style) in "
 ssh_only = true
+ssh_symbol = " "
 style = "bold dimmed red"
 trim_at = "-"
 
@@ -22,6 +23,7 @@ style = "bold cyan"
 truncate_to_repo = true
 truncation_length = 0
 truncation_symbol = "冫"
+read_only = " 󰌾"
 
 # Fourth param
 [sudo]
@@ -73,31 +75,80 @@ disabled = true
 format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
 map_symbol = true
 pipestatus = true
-symbol = "✖"
+symbol = " "
+
+[gcloud]
+symbol = " "
+disabled = true
 
 [aws]
 symbol = " "
 
+[buf]
+symbol = " "
+
+[bun]
+symbol = " "
+
+[c]
+symbol = " "
+
+[cpp]
+symbol = " "
+
+[cmake]
+symbol = " "
+
 [conda]
 symbol = " "
 
+[crystal]
+symbol = " "
+
 [dart]
 symbol = " "
+
+[deno]
+symbol = " "
 
 [docker_context]
 symbol = " "
 
 [elixir]
-symbol = " "
+symbol = " "
 
 [elm]
 symbol = " "
 
+[fennel]
+symbol = " "
+
+[fortran]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
 [git_branch]
 symbol = " "
 
+[git_commit]
+tag_symbol = '  '
+
 [golang]
 symbol = " "
+
+[gradle]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
 
 [hg_branch]
 symbol = " "
@@ -108,35 +159,116 @@ symbol = " "
 [julia]
 symbol = " "
 
+[kotlin]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
 [nim]
-symbol = " "
+symbol = "󰆥 "
 
 [nix_shell]
-symbol = " "
+symbol = " "
 
 [nodejs]
-symbol = " "
+symbol = " "
+
+[ocaml]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+AOSC = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Elementary = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Ios = "󰀷 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+Zorin = " "
 
 [package]
-symbol = " "
+symbol = "󰏗 "
 
 [perl]
-symbol = " "
+symbol = " "
 
 [php]
 symbol = " "
 
+[pijul_channel]
+symbol = " "
+
+[pixi]
+symbol = "󰏗 "
+
 [python]
-symbol = " "
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
 
 [ruby]
-symbol = " "
+symbol = " "
 
 [rust]
-symbol = " "
+symbol = "󱘗 "
+
+[scala]
+symbol = " "
 
 [swift]
-symbol = "ﯣ "
+symbol = " "
 
-[gcloud]
-disabled = true
+[xmake]
+symbol = " "
+
+[zig]
+symbol = " "
