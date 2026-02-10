@@ -5,6 +5,8 @@ set -gx PATH "$HOME/.npm-global/bin" $PATH
 set -gx PATH /opt/cuda/bin $PATH
 set -gx GEM_HOME "$HOME/.local/share/gem/ruby/3.0.0/bin"
 set -gx PATH $GEM_HOME $PATH
+set -gx BUN_INSTALL "$HOME/.bun"
+set -gx PATH $BUN_INSTALL/bin $PATH
 set -gx PATH "$HOME/Scripts" $PATH
 
 # set the default pager to neovim

@@ -67,3 +67,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+alias claude-mem='/home/aik2/.bun/bin/bun "/home/aik2/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
