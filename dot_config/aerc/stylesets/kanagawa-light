@@ -29,7 +29,7 @@ border.bold=true
 
 msglist_unread.bold=true
 msglist_unread.fg=#4e8ca2
-msglist_flagged.fg=#836f4a
+msglist_flagged.fg=#b35b79
 msglist_flagged.bold=true
 msglist_result.fg=#4d699b
 msglist_result.bold=true
