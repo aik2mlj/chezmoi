@@ -1,8 +1,0 @@
-[Desktop Entry]
-Categories=Utility;
-Exec=awatcher
-GenericName=Activity watcher
-Icon=/usr/share/awatcher/icons/awatcher.png
-Name=Awatcher
-Terminal=false
-Type=Application
