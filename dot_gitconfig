@@ -1,6 +1,6 @@
 [user]
-	name = Lejun Min
-	email = aik2mlj@gmail.com
+    name = Lejun Min
+    email = aik2mlj@gmail.com
 
 [merge]
     conflictstyle = diff3
@@ -9,11 +9,17 @@
     name = mergiraf
     driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
 
-; [https]
-; 	proxy = http://127.0.0.1:7890
-; [http]
-; 	proxy = http://127.0.0.1:7890
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 
+; [https]
+;     proxy = http://127.0.0.1:7890
+; [http]
+;     proxy = http://127.0.0.1:7890
+;
 ; [include]
 ;     path = ~/.config/delta/themes.gitconfig
 ;
@@ -33,4 +39,3 @@
 ;
 ; [diff]
 ;     colorMoved = default
-
