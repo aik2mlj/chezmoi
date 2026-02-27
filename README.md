@@ -53,11 +53,21 @@ Necessary environment variables have been set in [`~/.config/environment.d/fcitx
 
 ## Terminal Utils
 
-Please take a look at my [remote server configurations](https://github.com/aik2mlj/remote-server-configs) where I introduce many great **terminal** utilities and configurations. They are also included here.
+I use [kitty](https://sw.kovidgoyal.net/kitty/) as my main terminal emulator. It's always at the frontier of terminal features like ligatures, cursor animation, image display, etc.
 
-## Desktop Softwares
+Please take a look at my [remote server configurations](https://github.com/aik2mlj/remote-server-configs) where I introduce **must-have** terminal utilities and configurations. Their configs are also included here.
 
-My preferred **desktop** softwares and utils:
+Apart from those, I also found these terminal utils useful on desktop:
+
+- [aerc](https://aerc-mail.org/): A terminal email client. It supports multiple accounts, various backends (including [JMAP](https://jmap.io/)), Vim-style keybindings, HTML rendering (using `chawan` or `w3m`), and has a nice TUI.
+
+- [chawan](https://chawan.net/): A terminal web browser and pager with CSS, inline images, and JavaScript support. I found it more feature-rich than `w3m` or `lynx`.
+
+- [atuin](https://atuin.sh/): A better shell history search and sync tool. It stores your shell history in a SQLite database, supports fuzzy search, and can sync across devices. It encrypts your data before sending to their server, and if you don't trust them you can self-host the server.
+
+## GUI Softwares
+
+My preferred **GUI** softwares:
 
 - [mpv](https://wiki.archlinux.org/title/Mpv): A minimal, versatile and highly customizable media player. My configuration includes several utils (media control & thumbnail generation) and a nice UI skin. Check and run [`~/.config/mpv/packages.install`](dot_config/mpv/executable_packages.install) to install the necessary packages.
 
@@ -80,6 +90,21 @@ My preferred **desktop** softwares and utils:
 
 - [Yakuake](https://wiki.archlinux.org/title/Yakuake): A drop-down terminal emulator for KDE Plasma.
 
+- [Obsidian](https://obsidian.md/): A powerful knowledge base that works on top of a local folder of plain text Markdown files. It supports all platforms and has tons of community plugins and themes. I use it for note-taking and knowledge management.
+  - Tip: don't want to pay for sync? Use [Syncthing](https://syncthing.net/) to sync your vault across devices.
+
+- [Typst](https://typst.app/): A modern typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use. I just love its speed and elegant syntax design that surpasses LaTeX so much. Writing math equations feel like a breeze without backslashes. I use it for my academic writing and note-taking.
+  - Obsidian user? Check out [this plugin](https://github.com/azyarashi/obsidian-typst-mate) to render Typst math equations in Obsidian.
+  - Neovim user? Check out the [extra config](https://www.lazyvim.org/extras/lang/typst) by Lazyvim.
+
+- ~~[Spectacle OCR](Scripts/executable_spectacle-ocr.sh): OCR screenshot utility using `spectacle` and `tesseract`. It allows you to select a region of the screen, take a screenshot, and extract (English + Simplified Chinese) text from it. Mapped to `Meta+Print` in [KDE Plasma shortcuts](dot_config/private_kglobalshortcutsrc).~~ Now with KDE Plasma 6.6, the built-in screenshot tool `spectacle` already supports OCR. Install the necessary packages with:
+
+  ```bash
+  paru -S --needed tesseract tesseract-data-eng tesseract-data-chi_sim spectacle  # English + Simplified Chinese (change it to your language)
+  ```
+
+## Daemons and Services
+
 - [Libinput-gestures](https://wiki.archlinux.org/title/Libinput#libinput-gestures): Actions gestures on your touchpad using libinput. Bundled with Garuda Linux by default. I map 3-finger swipe up/down to `ctrl-t/w` for quick tab new/close in browsers with [ydotool](https://github.com/ReimuNotMoe/ydotool) (the default `xdotool` mapping is not compatible with Wayland). See [`~/.config/libinput-gestures.conf`](./dot_config/libinput-gestures.conf). Enable it with:
 
   ```bash
@@ -87,16 +112,11 @@ My preferred **desktop** softwares and utils:
   systemctl --user enable --now ydotool.service
   ```
 
-  - Alternative: [Fusuma](https://wiki.archlinux.org/title/Libinput#fusuma) is also configured. Uncomment the line in [`~/.profile`](dot_profile) to enable it.
-
-- [Spectacle OCR](Scripts/executable_spectacle-ocr.sh): OCR screenshot utility using `spectacle` and `tesseract`. It allows you to select a region of the screen, take a screenshot, and extract (English + Simplified Chinese) text from it. Mapped to `Meta+Print` in [KDE Plasma shortcuts](dot_config/private_kglobalshortcutsrc). Install the necessary packages with:
-
-  ```bash
-  paru -S --needed tesseract tesseract-data-eng tesseract-data-chi_sim spectacle
-  ```
+  - Alternative: [Fusuma](https://wiki.archlinux.org/title/Libinput#fusuma) is also configured. Uncomment the line in [`~/.profile`](dot_profile) to enable it. Do not enable both.
 
 - [Firefox Ctrl+W Disable Hook](Scripts/firefox-omni.hook): A pacman post-install hook that patches Firefox to prevent accidental tab closing with Ctrl+W. Handy if you use vim mode in [Typst](https://typst.app/) or [Overleaf](https://www.overleaf.com/). See [this blog post](https://www.math.cmu.edu/~gautam/sj/blog/20220329-firefox-disable-ctrl-w.html) for details. Run [~/Scripts/install-firefox-omni-hook.sh](Scripts/executable_install-firefox-omni-hook.sh) to automatically set it up.
 
 - [Darkman](https://wiki.archlinux.org/title/Dark_mode_switching#Tools): Auto switch light/dark mode based on time and your location, with customizable scripts for many softwares. See my list of configured softwares for [light](dot_config/darkman/light-mode.d)/[dark](dot_config/darkman/dark-mode.d) schemes. Manual toggle keybinding is mapped to `Meta+Shift+D` in [KDE Plasma shortcuts](dot_config/private_kglobalshortcutsrc). Run [`~/.config/darkman/install.sh`](dot_config/darkman/executable_install.sh) to set it up.
 
-- [Caps Lock Enhancement](dot_config/udevmon/): Turn CAPSLOCK into CTRL when key-chording and ESC when pressed alone using interception-tools. Very handy for vim users. Run [`~/.config/udevmon/install.sh`](dot_config/udevmon/executable_install.sh) to enable this system-wide modification.
+- [Caps Lock Enhancement](dot_config/udevmon/): Turn CAPSLOCK into CTRL when key-chording and ESC when pressed alone. Very handy for vim users. I use [keyd](https://github.com/rvaiya/keyd), a great keyboard remapping daemon for this. Run [~/.config/keyd/install.sh](dot_config/keyd/executable_install.sh) to set it up.
+  - Alternative: [interception-tools](https://gitlab.com/interception/linux/tools) is another util for altering input events. Run [`~/.config/udevmon/install.sh`](dot_config/udevmon/executable_install.sh) to enable the Caps Lock enhancement with it. Do not enable both.
