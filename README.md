@@ -2,7 +2,7 @@
 
 My personal dotfiles managed with [chezmoi](https://www.chezmoi.io/).
 
-This is my [Garuda Linux](https://garudalinux.org/) desktop setup using [KDE Plasma](https://kde.org/plasma-desktop/), therefore heavily adjusted to my personal preference. It should be able to generalize to other Linux distributions (especially Arch-based ones) with some adjustments. For a general and minimal Linux terminal environment setup, I recommend using my [remote server configurations](https://github.com/aik2mlj/remote-server-configs).
+This is my [Garuda Linux](https://garudalinux.org/) desktop setup using [KDE Plasma](https://kde.org/plasma-desktop/), therefore heavily adjusted to my personal preference. It should be able to generalize to other Linux distributions (especially Arch-based ones) with some adjustments. For a general and minimal Linux terminal environment setup, I recommend using my [CLI Toolbox](https://github.com/aik2mlj/cli-toolbox).
 
 ## Installation
 
@@ -55,7 +55,7 @@ Necessary environment variables have been set in [`~/.config/environment.d/fcitx
 
 I use [kitty](https://sw.kovidgoyal.net/kitty/) as my main terminal emulator. It's always at the frontier of terminal features like ligatures, cursor animation, image display, etc.
 
-Please take a look at my [remote server configurations](https://github.com/aik2mlj/remote-server-configs) where I introduce **must-have** terminal utilities and configurations. Their configs are also included here.
+Please take a look at my [CLI Toolbox](https://github.com/aik2mlj/cli-toolbox) where I introduce **must-have** terminal utilities and configurations. Their configs are also included here.
 
 Apart from those, I also found these terminal utils useful on desktop:
 
