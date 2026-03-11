@@ -7,9 +7,11 @@ wrap = "yes"
 
 [open]
 prepend_rules = [
-    { mime = "audio/*", use = "play_audio" },
-    { url = "*.docx", use = ["doxx", "pandoc"] },
-    { url = "*.doc", use = ["antiword"] },
+    { mime = "audio/*", use = ["play_audio", "open"] },
+    { url = "*.docx", use = ["doxx", "mcat", "open"] },
+    { url = "*.csv", use = ["edit", "mcat", "open"] },
+    { url = "*.{xls,xlsx,xlsm,xlsb,xla,xlam,odt,odp,pptx,ods}", use = ["mcat", "open"] },
+    { url = "*.doc", use = ["antiword", "open"] },
     { url = "*.html", use = ["edit", "open"] },
     { url = "*.ipynb", use = ["open"] },
 ]
@@ -20,13 +22,17 @@ play_audio = [
 ]
 doxx = [
     # export docx to text, then open nvim to edit it
-    { run = 'doxx "$@" --export text | nvim -c "set filetype=markdown" -c "set wrap" -', block = true },
+    { run = 'f=$(mktemp --suffix=.md) && doxx "$@" --export text > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "doxx" },
 ]
 pandoc = [
-    { run = 'pandoc "$@" -s -t markdown --wrap=none | nvim -c "set filetype=markdown" -c "set wrap" -', block = true },
+    { run = 'f=$(mktemp --suffix=.md) && pandoc "$@" -s -t gfm --wrap=none > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "pandoc" },
 ]
 antiword = [
-    { run = 'antiword "$@" | nvim -c "set filetype=plain" -c "set wrap" -', block = true },
+    { run = 'f=$(mktemp --suffix=.md) && antiword "$@" > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "antiword" },
+]
+mcat = [
+    # export to markdown with mcat, then open nvim to edit it
+    { run = 'f=$(mktemp --suffix=.md) && mcat "$@" -o md > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "mcat" },
 ]
 
 [[plugin.prepend_fetchers]]
