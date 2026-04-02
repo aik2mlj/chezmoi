@@ -55,7 +55,7 @@ prepend_previewers = [
     { url = "/mnt/remote/**", run = "noop" },
     # { url = "*.csv", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },   # for csv files
     # { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=$( [[ $(kreadconfig6 --group General --key ColorScheme) == *[Dd]ark* ]] && echo dark || echo light ) "$1"' },
-    { url = "*.docx", run = 'piper -- doxx "$1" --export ansi -w=$w --color-depth 4' },
+    # { url = "*.docx", run = 'piper -- doxx "$1" --export ansi -w=$w --color-depth 4' },
     # mcat is faster and prettier than glow. need to strip the stdin header and OSC 8 hyperlink escape sequences
     { url = "*.{md,docx,xls,xlsx,xlsm,xlsb,xla,xlam,odt,odp,pptx,ods}", run = 'piper -- mcat -P -c -f --sc "$w"xauto --theme=$( [[ $(kreadconfig6 --group General --key ColorScheme) == *[Dd]ark* ]] && echo kanagawa || echo makurai_light ) "$1" | perl -pe "s/\e\]8;[^;]*;[^\e]*\e\\\\//g"' },
     { url = "*.ipynb", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },
