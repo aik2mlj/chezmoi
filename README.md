@@ -76,7 +76,8 @@ My preferred **GUI** softwares:
 
 - [WPS Office](https://wiki.archlinux.org/title/WPS_Office): A solid alternative to Microsoft Office. I find it the most compatible and responsible on Linux.
 
-- [Foliate](https://johnfactotum.github.io/foliate/): A great eBook reader with a clean interface.
+- [Readest](https://readest.com/): A cross-platform ebook reader with cloud sync across devices. The best open-source eBook reader currently.
+  - Also check [Foliate](https://johnfactotum.github.io/foliate/) if you just want a local eBook reader with a nice interface.
 
 - [Syncthing](https://wiki.archlinux.org/title/Syncthing): The best open-source file synchronization tool. It can be used to sync files between your devices, including your phone. There's no subscription or centralized providers, as the data transfer is encrypted in a volunteered p2p network. There is a nice [tray integration](https://wiki.archlinux.org/title/Syncthing#Syncthing_Tray).
 
