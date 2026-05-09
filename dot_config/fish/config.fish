@@ -125,11 +125,6 @@ alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
 # Recent installed packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 
-# rclone stuff
-alias mount_yuki='rclone mount --vfs-cache-mode writes --vfs-cache-max-size 5G --vfs-cache-max-age 10h --daemon yuki: /mnt/Yuki'
-alias mount_yuki_top='rclone mount --vfs-cache-mode writes --vfs-cache-max-size 5G --vfs-cache-max-age 10h --daemon yuki_top: /mnt/Yuki_top'
-alias mount_gsd='rclone mount --vfs-cache-mode writes --vfs-cache-max-size 5G --vfs-cache-max-age 10h --daemon gsd: /mnt/GSD'
-
 # bind \co "set old_tty (stty -g); stty sane; lfcd; stty $old_tty; commandline -f repaint"
 # bind \co ranger-cd
 abbr ra ranger-cd
