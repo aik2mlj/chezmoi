@@ -35,28 +35,13 @@ mcat = [
     { run = 'f=$(mktemp --suffix=.md) && mcat "$@" -o md > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "mcat" },
 ]
 
-[[plugin.prepend_fetchers]]
-id = "no-remote"
-url = "/mnt/remote/**"
-run = "noop"
-
-[[plugin.prepend_fetchers]]
-id = "git"
-url = "*"
-run = "git"
-
-[[plugin.prepend_fetchers]]
-id = "git"
-url = "*/"
-run = "git"
-
 [plugin]
 prepend_previewers = [
     { url = "/mnt/remote/**", run = "noop" },
     # { url = "*.csv", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },   # for csv files
     # { url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=$( [[ $(kreadconfig6 --group General --key ColorScheme) == *[Dd]ark* ]] && echo dark || echo light ) "$1"' },
     # { url = "*.docx", run = 'piper -- doxx "$1" --export ansi -w=$w --color-depth 4' },
-    # mcat is faster and prettier than glow. need to strip the stdin header and OSC 8 hyperlink escape sequences
+    # mcat is faster and prettier than glow. need to strip the OSC 8 hyperlink escape sequences
     { url = "*.{md,docx,xls,xlsx,xlsm,xlsb,xla,xlam,odt,odp,pptx,ods}", run = 'piper -- mcat -P -c -f --sc "$w"xauto --theme=$( [[ $(kreadconfig6 --group General --key ColorScheme) == *[Dd]ark* ]] && echo kanagawa || echo makurai-light ) "$1" | perl -pe "s/\e\]8;[^;]*;[^\e]*\e\\\\//g"' },
     { url = "*.ipynb", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },
     { url = "*.html", run = 'piper -- (command -v cha >/dev/null 2>&1 && cha -d "$1") || w3m -dump "$1"' },
@@ -78,4 +63,9 @@ prepend_preloaders = [
     { mime = "application/subrip", run = "mediainfo" },
     # Adobe Illustrator, Adobe Photoshop is image/adobe.photoshop, already handled above
     { mime = "application/postscript", run = "mediainfo" },
+]
+prepend_fetchers = [
+    { url = "/mnt/remote/**", run = "noop", group = "no-remote" },
+    { url = "*", run = "git", group = "git" },
+    { url = "*/", run = "git", group = "git" },
 ]
