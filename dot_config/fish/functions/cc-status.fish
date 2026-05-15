@@ -1,4 +1,4 @@
-function llm-status --description "Show current Claude Code provider"
+function cc-status --description "Show current Claude Code provider"
     echo "BASE_URL   : "(set -q ANTHROPIC_BASE_URL && echo $ANTHROPIC_BASE_URL || echo "(default Anthropic)")
     echo "MODEL      : "(set -q ANTHROPIC_MODEL && echo $ANTHROPIC_MODEL || echo "(claude default)")
     echo "OPUS MODEL : "(set -q ANTHROPIC_DEFAULT_OPUS_MODEL && echo $ANTHROPIC_DEFAULT_OPUS_MODEL || echo "(claude default)")

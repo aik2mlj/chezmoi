@@ -1,4 +1,4 @@
-function use-anthropic --description "Switch Claude Code to Anthropic (subscription/OAuth)"
+function cc-anthropic --description "Switch Claude Code to Anthropic (subscription/OAuth)"
     set -e ANTHROPIC_BASE_URL
     set -e ANTHROPIC_AUTH_TOKEN
     set -e ANTHROPIC_MODEL

@@ -1,4 +1,4 @@
-function use-deepseek --description "Switch Claude Code to DeepSeek"
+function cc-deepseek --description "Switch Claude Code to DeepSeek"
     if not set -q DEEPSEEK_API_KEY
         echo "✗ DEEPSEEK_API_KEY is not set"
         return 1
