@@ -1,0 +1,12 @@
+[Unit]
+Description=Yakuake drop-down terminal
+PartOf=graphical-session.target
+After=plasma-workspace.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/yakuake
+Restart=on-failure
+
+[Install]
+WantedBy=plasma-workspace.target
