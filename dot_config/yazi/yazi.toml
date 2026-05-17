@@ -46,6 +46,7 @@ prepend_previewers = [
     { url = "*.ipynb", run = 'piper -- rich -j --left --panel=rounded --guides --line-numbers --force-terminal "$1"' },
     { url = "*.html", run = 'piper -- (command -v cha >/dev/null 2>&1 && cha -d "$1") || w3m -dump "$1"' },
     { url = "*.doc", run = 'piper -- antiword "$1"' },
+    { url = "*.srt", run = "code" },
 
     # mediainfo
     # Replace magick, image, video with mediainfo
