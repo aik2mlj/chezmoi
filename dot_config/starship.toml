@@ -69,6 +69,9 @@ disabled = false
 error_symbol = "[×](bold red)"
 success_symbol = "(bold red)"
 
+[battery]
+disabled = true
+
 # SYMBOLS
 [status]
 disabled = true
