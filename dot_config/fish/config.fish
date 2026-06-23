@@ -115,7 +115,7 @@ function set_proxy
 end
 
 # uncomment the next line to set proxy for terminal
-# set_proxy
+set_proxy
 
 # deepssek
 set -gx DEEPSEEK_API_KEY (cat ~/.deepseek_api_key)
