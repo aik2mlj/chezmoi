@@ -17,24 +17,24 @@ prepend_rules = [
 
 [opener]
 play_audio = [
-	{ run = 'mpv "$@"', block = true },
+	{ run = 'mpv %s', block = true },
 ]
 doxx = [
     # export docx to text, then open nvim to edit it
-    { run = 'f=$(mktemp --suffix=.md) && doxx "$@" --export text > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "doxx" },
+    { run = 'f=$(mktemp --suffix=.md) && doxx %s --export text > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "doxx" },
 ]
 pandoc = [
-    { run = 'f=$(mktemp --suffix=.md) && pandoc "$@" -s -t gfm --wrap=none > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "pandoc" },
+    { run = 'f=$(mktemp --suffix=.md) && pandoc %s -s -t gfm --wrap=none > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "pandoc" },
 ]
 antiword = [
-    { run = 'f=$(mktemp --suffix=.md) && antiword "$@" > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "antiword" },
+    { run = 'f=$(mktemp --suffix=.md) && antiword %s > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "antiword" },
 ]
 mcat = [
-    { run = 'mcat -p --theme=$( [[ $(kreadconfig6 --group General --key ColorScheme) == *[Dd]ark* ]] && echo kanagawa || echo makurai-light ) "$@"', block = true, desc = "mcat" },
+    { run = 'mcat -p --theme $( [[ $(kreadconfig6 --group General --key ColorScheme) == *[Dd]ark* ]] && echo kanagawa || echo makurai-light ) %s', block = true, desc = "mcat" },
 ]
 mcat_edit = [
     # export to markdown with mcat, then open nvim to edit it
-    { run = 'f=$(mktemp --suffix=.md) && mcat "$@" -o md > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "edit" },
+    { run = 'f=$(mktemp --suffix=.md) && mcat %s -o md > "$f" && nvim "$f"; rm -f "$f"', block = true, desc = "edit" },
 ]
 
 [plugin]
