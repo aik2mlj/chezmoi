@@ -1,7 +1,7 @@
 [[mgr.prepend_keymap]]
 on = ["<C-n>"]
 run = '''
-	shell 'dragon-drop -a -x "$@"'
+	shell 'dragon-drop -a -x %s'
 '''
 
 [[mgr.prepend_keymap]]
@@ -37,7 +37,7 @@ desc = "Archive selected files (password+header+level)"
 [[mgr.prepend_keymap]]
 on = ["R"]
 run = '''
-    shell "$@" --block
+    shell %s --block
 '''
 desc = "Execute the scripts"
 
