@@ -1,3 +1,4 @@
 git:
-  pagers:
-    - externalDiffCommand: difft --color=always --syntax-highlight=off
+  diffRenderers:
+    - command: difft --color=always --syntax-highlight=off
+      type: extDiff
