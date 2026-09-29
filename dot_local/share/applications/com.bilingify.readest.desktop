@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Office;
+Comment=Your online library
+Exec=env UBUNTU_MENUPROXY=0 readest %U
+StartupWMClass=readest
+Icon=readest
+Name=Readest
+Terminal=false
+Type=Application
+MimeType=application/epub+zip;application/x-mobipocket-ebook;application/vnd.amazon.ebook;application/vnd.amazon.mobi8-ebook;application/x-fictionbook+xml;application/vnd.comicbook+zip;application/pdf;text/plain;text/markdown;x-scheme-handler/readest;x-scheme-handler/readest-onedrive;x-scheme-handler/com.googleusercontent.apps.209390247301-ctpmep68ppfa56r1b8tr35e4qi4p60kq
