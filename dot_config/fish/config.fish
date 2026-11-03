@@ -24,10 +24,10 @@ fzf_configure_bindings --directory=\cf
 bind \co "yazi-cd; commandline -f repaint"
 
 # use eza instead of ls
-alias ls="eza -b --group-directories-first --icons"
-alias la="eza -b -l -a --group-directories-first --icons"
-alias ll="eza -b -l --group-directories-first --icons"
-alias l.="eza -b -a --group-directories-first --icons | egrep '^\.'" # show only dotfiles
+alias ls="eza -b --group-directories-first --icons=auto"
+alias la="eza -b -l -a --group-directories-first --icons=auto"
+alias ll="eza -b -l --group-directories-first --icons=auto"
+alias l.="eza -b -a --group-directories-first --icons=auto | egrep '^\.'" # show only dotfiles
 # also lt for tree display. see functions/lt.fish
 alias ..='cd ..'
 alias ...='cd ../..'
