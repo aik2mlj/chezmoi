@@ -109,8 +109,12 @@ My preferred **GUI** softwares:
 - [Libinput-gestures](https://wiki.archlinux.org/title/Libinput#libinput-gestures): Actions gestures on your touchpad using libinput. Bundled with Garuda Linux by default. I map 3-finger swipe up/down to `ctrl-t/w` for quick tab new/close in browsers with [ydotool](https://github.com/ReimuNotMoe/ydotool) (the default `xdotool` mapping is not compatible with Wayland). See [`~/.config/libinput-gestures.conf`](./dot_config/libinput-gestures.conf). Enable it with:
 
   ```bash
+  # if you haven't added yourself to the `input` group yet
+  sudo gpasswd -a "$USER" input
+  # reboot
+
   paru -S --needed libinput-gestures ydotool
-  systemctl --user enable --now ydotool.service
+  systemctl --user enable --now ydotool.service libinput-gestures.service
   ```
 
   - Alternative: [Fusuma](https://wiki.archlinux.org/title/Libinput#fusuma) is also configured. Uncomment the line in [`~/.profile`](dot_profile) to enable it. Do not enable both.
