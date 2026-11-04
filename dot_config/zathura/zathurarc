@@ -1,4 +1,4 @@
-include kanagawa-light
+include kanagawa-dark
 set recolor-keephue true
 set recolor true
 

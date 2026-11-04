@@ -6,7 +6,7 @@ SkinInstalledWithKns=true
 Translucency=true
 
 [Desktop Entry]
-DefaultProfile=Light.profile
+DefaultProfile=Dark.profile
 
 [Dialogs]
 FirstRun=false
@@ -15,6 +15,5 @@ FirstRun=false
 hinding_title_bar=false
 
 [Window]
-KeepOpen=false
 ShowSystrayIcon=false
 ShowTitleBar=false
