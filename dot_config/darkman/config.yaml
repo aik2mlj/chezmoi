@@ -1,5 +1,9 @@
-lat: 37.4
-lng: -122.2
+# uncomment the lat & lng lines for manual location,
+# or change `usegeoclue` to true for automatic location
+# either would trigger auto theme switch when sunrise & sunset
+
+# lat: 37.4
+# lng: -122.2
 usegeoclue: false
 dbusserver: true
 portal: true
