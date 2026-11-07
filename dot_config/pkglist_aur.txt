@@ -1,11 +1,10 @@
+amazon-fonts
 canvas-downloader-bin
-cbonsai
 chuckfmt-bin
 emailbook-rs-bin
 fcitx5-skin-fluentdark-git
 fcitx5-skin-fluentlight-git
 herdr-bin
-iamb-bin
 kf6-servicemenus-imagetools
 marp-cli-bin
 mcat-bin
@@ -13,7 +12,6 @@ otf-nasin-nanpa
 rave-vst-bin
 rmlint
 sitala-bin
-ttf-bookerly
 ttf-lxgw-bright
 ttf-ysabeau-git
 wechat-universal-bwrap
