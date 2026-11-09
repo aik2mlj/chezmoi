@@ -8,5 +8,5 @@ autofocus = true
 # scripting = true
 
 [page]
-' r' = "pager.externFilterSource('rdrview -H -u \"$CHA_URL\"')"
-' f' = "pager.externFilterSource('fmt')"
+'SPC r' = "pager.externFilterSource('rdrview -H -u \"$CHA_URL\"')"
+'SPC f' = "pager.externFilterSource('fmt')"
